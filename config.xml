@@ -40,7 +40,7 @@
     
     <!-- SPLASH SCREENS -->
     
-    <gap:splash src="splash.png" /> <!-- default, 800x1280 pixels -->
+    <gap:splash src="splash.png" /> <!-- default, 320x480 pixels -->
     
     <gap:splash src="splash/ios/iPadLandscape.png" width="1024" height="768" />
     <gap:splash src="splash/ios/iPadPortrait.png" width="768" height="1024" />
