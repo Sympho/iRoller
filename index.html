@@ -1,0 +1,171 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+        <title>iRoller</title> 
+        
+        <!-- WEB SEARCH META TAGS -->
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+        <meta content="index,follow" name="robots" />
+        <meta content="Android,Web,App,iPod,iPhone,iPad,iRoller,Roll,Dice,d20,System,Formula,D,De,Dè,Dé,Roller,D&D,DnD,DeD,Dungeons,Dragons" name="Keywords" />
+        <meta content="A Smartphone Web Application to roll d20 System Dice and Formula Dé Dice" name="Description" />
+        
+        <!-- SAFARI WEB APP META TAGS -->
+        <meta content="yes" name="apple-mobile-web-app-capable" />
+        <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+        <link href="icons/ios/icon57.png" sizes="57x57" rel="apple-touch-icon" />
+        <link href="icons/ios/icon72.png" sizes="72x72" rel="apple-touch-icon" />
+        <link href="icons/ios/icon114.png" sizes="114x114" rel="apple-touch-icon" />
+        <link href="splash/ios/iPhoneDefault.png" rel="apple-touch-startup-image" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"> 
+            
+        <!-- JQUERY MOBILE FRAMEWORK META TAGS -->
+        <link rel="stylesheet" href="lib/jquery.mobile-1.1.0.css" />
+        <script src="lib/jquery-1.7.1.js"></script>
+        <script src="lib/jquery.mobile-1.1.0.js"></script>
+            
+        <!-- ADD2HOME META TAGS -->
+        <script type="application/javascript" src="lib/add2home.js"></script>
+        <link rel="stylesheet" href="lib/add2home.css">
+        <script type="text/javascript">
+            var addToHomeConfig = {
+                animationIn: 'drop',
+                animationOut: 'fade',
+                startDelay: 1000,
+                lifespan: 5000,
+                expire: 2,
+                touchIcon:true,
+            };
+        </script>
+            
+        <!-- APPLICATION SCRIPT -->
+        <script src="lib/iroller.js"></script>
+            
+    </head> 
+    <body onload="init()"> 
+        
+        <!-- PAGINA HOME (D20) -->
+        <div data-role="page" id="d20">
+            <div data-role="header" data-theme="a" data-position="inline" data-id="barra">
+                <h1>iRoller</h1>
+                <a href="#about" data-icon="info" class="ui-btn-right" data-theme="a">Info</a>
+                
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#" data-transition="fade" data-corners="false" data-theme="a">d20 System</a></li>
+                        <li><a href="#formulad" data-transition="fade" data-corners="false" data-theme="a">Formula Dé</a></li>
+                        <li><a href="#history" data-transition="fade" data-corners="false" data-theme="a">History</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+                
+            </div><!-- /header -->
+            
+            <div data-role="content" data-theme="c">	
+                <form>
+                    <input name="risultato" type="text" readonly="true" value="" placeholder="Results will appear here">
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="d4" onclick="d(4, risultato)"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="d6" onclick="d(6, risultato)"></div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="d8" onclick="d(8, risultato)"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="d10" onclick="d(10, risultato)"></div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="d12" onclick="d(12, risultato)"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="d20" onclick="d(20, risultato)"></div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="d100" onclick="d(100, risultato)"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="Coin" onclick="coin(risultato)"></div>
+                    </div>
+                
+                <hr>
+                
+                <p align="center"><b>Custom Mode</b></p>
+                <div class="ui-grid-b">
+                    <div class="ui-block-a"><input name="num" type="number" min="1" max="100" value="1"></div>
+                    <div class="ui-block-b"><p align="center"><b>d</b></p></div>
+                    <div class="ui-block-c"><input name="facce" type="number" min="2" max="100" value="20"></div>
+                </div>
+                <input name="customris" type="text" readonly="true" value="" placeholder="Results will appear here">
+                <input type="button" data-theme="a" value="Roll" onclick="custom(num, facce, customris)">
+                
+                </form>
+            </div><!-- /content -->
+        </div><!-- /page -->
+        
+        
+        <!-- PAGINA FORMULAD -->
+        <div data-role="page" id="formulad">
+            <div data-role="header" data-theme="a" data-position="inline" data-id="barra">
+                <h1>iRoller</h1>
+                <a href="#about" data-icon="info" class="ui-btn-right" data-theme="a">Info</a>
+                
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#d20" data-transition="fade" data-corners="false" data-theme="a" >d20 System</a></li>
+                        <li><a href="#" data-transition="fade" data-corners="false" data-theme="a">Formula Dé</a></li>
+                        <li><a href="#history" data-transition="fade" data-corners="false" data-theme="a">History</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+                
+            </div><!-- /header -->
+            <div data-role="content">
+                <form>
+                    <input name="spostamento" type="text" readonly="true" value="" placeholder="Results will appear here">
+                    <input type="button" data-theme="e" value="1st Gear (1 - 2)" onclick="marcia(1, spostamento)">
+                    <input type="button" data-theme="a" value="2nd Gear (2 - 4)" onclick="marcia(2, spostamento)">
+                    <input type="button" data-theme="a" value="3rd Gear (4 - 8)" onclick="marcia(3, spostamento)">
+                    <input type="button" data-theme="a" value="4th Gear (7 - 12)" onclick="marcia(4, spostamento)">
+                    <input type="button" data-theme="a" value="5th Gear (11 - 20)" onclick="marcia(5, spostamento)">
+                    <input type="button" data-theme="b" value="6th Gear (21 - 30)" onclick="marcia(6, spostamento)">
+                </form>
+            </div><!-- /content -->
+        </div><!-- /page -->
+        
+        
+        <!-- PAGINA HISTORY -->
+        <div data-role="page" id="history">
+            <div data-role="header" data-theme="a" data-position="inline" data-id="barra">
+                <h1>iRoller</h1>
+                <a href="#about" data-icon="info" class="ui-btn-right" data-theme="a">Info</a>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#d20" data-transition="fade" data-corners="false" data-theme="a" >d20 System</a></li>
+                        <li><a href="#formulad" data-transition="fade" data-corners="false" data-theme="a">Formula Dé</a></li>
+                        <li><a href="#" data-transition="fade" data-corners="false" data-theme="a">History</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+                
+            </div><!-- /header -->
+            <div data-role="content">	
+                <form>
+                    <input type="button" data-theme="a" data-icon="refresh" value="Refresh History" onclick="javascript:history.value=localStorage.logger;">
+		    <input type="button" data-theme="a" data-icon="delete" value="Clear History" onclick="javascript:init();">
+                        <textarea name="history" rows="30" readonly="true">&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#13;</textarea>	
+                </form>
+            </div><!-- /content -->
+        </div><!-- /page -->
+        
+        
+        <!-- PAGINA ABOUT -->
+        <div data-role="page" id="about">
+            <div data-role="header" data-theme="a" data-position="inline">
+                <a href="#d20" data-icon="back" data-transition="slide" data-direction="reverse" data-theme="a">Back</a>
+                <h1>About iRoller</h1>
+            </div>
+            <div data-role="content">
+                <p align="justify">
+                <b>Author:</b> Daniele Veneroni<br>
+                <b>Company:</b> Venerons Laboratories<br>
+                <b>Version:</b> 1.4.0<br><br>
+                <b>About:</b><br>
+                iRoller it's a smartphone Web Application to roll d20 System Dice and Formula Dé Dice.<br><br>
+                <b>Contacts:</b><br>
+                For more information about the project iRoller please visit the website <a href="http://veneronslabs.blogspot.com/">Venerons Laboratories</a>.
+                </p>
+            </div>
+        </div>
+        
+    </body>
+</html>
