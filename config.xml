@@ -2,8 +2,8 @@
 	<widget xmlns = "http://www.w3.org/ns/widgets"
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		id = "org.veneronslabs.iroller"
-		version = "1.4.0"
-		versionCode = "7">
+		version = "1.5.0"
+		versionCode = "8">
 
     <name>iRoller</name>
 
@@ -71,7 +71,7 @@
 	<!-- ANDROID PREFERENCES -->
 
 	<preference name="android-minSdkVersion" value="7" /> <!-- minimo Android 2.1 -->
-	<!-- <preference name="android-maxSdkVersion" value="15" /> massimo Android 4.0.3 -->
+	<!-- <preference name="android-maxSdkVersion" value="16" /> massimo Android 4.1 -->
 	<preference name="android-installLocation" value="auto" />
 	
 	<!-- PHONEGAP API FEATURES PREFERENCES -->
