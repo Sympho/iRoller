@@ -53,7 +53,7 @@
                     <ul>
                         <li><a href="#" data-transition="fade" data-corners="false" data-theme="a">d20 System</a></li>
                         <li><a href="#formulad" data-transition="fade" data-corners="false" data-theme="a">Formula Dé</a></li>
-                        <li><a href="#history" data-transition="fade" data-corners="false" data-theme="a">History</a></li>
+                        <li><a href="#logger" data-transition="fade" data-corners="false" data-theme="a">Logger</a></li>
                     </ul>
                 </div><!-- /navbar -->
                 
@@ -61,22 +61,22 @@
             
             <div data-role="content" data-theme="c">	
                 <form>
-                    <input name="risultato" type="text" readonly="true" value="" placeholder="Results will appear here">
+                    <p align="center" id="risultatod20"></p>
                     <div class="ui-grid-a">
-                        <div class="ui-block-a"><input type="button" data-theme="a" value="d4" onclick="d(4, risultato)"></div>
-                        <div class="ui-block-b"><input type="button" data-theme="a" value="d6" onclick="d(6, risultato)"></div>
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="d4" onclick="d(4)"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="d6" onclick="d(6)"></div>
                     </div>
                     <div class="ui-grid-a">
-                        <div class="ui-block-a"><input type="button" data-theme="a" value="d8" onclick="d(8, risultato)"></div>
-                        <div class="ui-block-b"><input type="button" data-theme="a" value="d10" onclick="d(10, risultato)"></div>
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="d8" onclick="d(8)"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="d10" onclick="d(10)"></div>
                     </div>
                     <div class="ui-grid-a">
-                        <div class="ui-block-a"><input type="button" data-theme="a" value="d12" onclick="d(12, risultato)"></div>
-                        <div class="ui-block-b"><input type="button" data-theme="a" value="d20" onclick="d(20, risultato)"></div>
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="d12" onclick="d(12)"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="d20" onclick="d(20)"></div>
                     </div>
                     <div class="ui-grid-a">
-                        <div class="ui-block-a"><input type="button" data-theme="a" value="d100" onclick="d(100, risultato)"></div>
-                        <div class="ui-block-b"><input type="button" data-theme="a" value="Coin" onclick="coin(risultato)"></div>
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="d100" onclick="d(100)"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="Coin" onclick="coin()"></div>
                     </div>
                 
                 <hr>
@@ -87,8 +87,8 @@
                     <div class="ui-block-b"><p align="center"><b>d</b></p></div>
                     <div class="ui-block-c"><input name="facce" type="number" min="2" max="100" value="20"></div>
                 </div>
-                <input name="customris" type="text" readonly="true" value="" placeholder="Results will appear here">
-                <input type="button" data-theme="a" value="Roll" onclick="custom(num, facce, customris)">
+                <p align="center" id="risultatocustom"></p>
+                <input type="button" data-theme="a" value="Roll" onclick="custom(num, facce)">
                 
                 </form>
             </div><!-- /content -->
@@ -105,27 +105,27 @@
                     <ul>
                         <li><a href="#d20" data-transition="fade" data-corners="false" data-theme="a" >d20 System</a></li>
                         <li><a href="#" data-transition="fade" data-corners="false" data-theme="a">Formula Dé</a></li>
-                        <li><a href="#history" data-transition="fade" data-corners="false" data-theme="a">History</a></li>
+                        <li><a href="#logger" data-transition="fade" data-corners="false" data-theme="a">Logger</a></li>
                     </ul>
                 </div><!-- /navbar -->
                 
             </div><!-- /header -->
             <div data-role="content">
                 <form>
-                    <input name="spostamento" type="text" readonly="true" value="" placeholder="Results will appear here">
-                    <input type="button" data-theme="e" value="1st Gear (1 - 2)" onclick="marcia(1, spostamento)">
-                    <input type="button" data-theme="a" value="2nd Gear (2 - 4)" onclick="marcia(2, spostamento)">
-                    <input type="button" data-theme="a" value="3rd Gear (4 - 8)" onclick="marcia(3, spostamento)">
-                    <input type="button" data-theme="a" value="4th Gear (7 - 12)" onclick="marcia(4, spostamento)">
-                    <input type="button" data-theme="a" value="5th Gear (11 - 20)" onclick="marcia(5, spostamento)">
-                    <input type="button" data-theme="b" value="6th Gear (21 - 30)" onclick="marcia(6, spostamento)">
+                    <p align="center" id="risultatofd"></p>
+                    <input type="button" data-theme="e" value="1st Gear (1 - 2)" onclick="marcia(1)">
+                    <input type="button" data-theme="a" value="2nd Gear (2 - 4)" onclick="marcia(2)">
+                    <input type="button" data-theme="a" value="3rd Gear (4 - 8)" onclick="marcia(3)">
+                    <input type="button" data-theme="a" value="4th Gear (7 - 12)" onclick="marcia(4)">
+                    <input type="button" data-theme="a" value="5th Gear (11 - 20)" onclick="marcia(5)">
+                    <input type="button" data-theme="b" value="6th Gear (21 - 30)" onclick="marcia(6)">
                 </form>
             </div><!-- /content -->
         </div><!-- /page -->
         
         
         <!-- PAGINA HISTORY -->
-        <div data-role="page" id="history">
+        <div data-role="page" id="logger">
             <div data-role="header" data-theme="a" data-position="inline" data-id="barra">
                 <h1>iRoller</h1>
                 <a href="#about" data-icon="info" class="ui-btn-right" data-theme="a">Info</a>
@@ -133,15 +133,15 @@
                     <ul>
                         <li><a href="#d20" data-transition="fade" data-corners="false" data-theme="a" >d20 System</a></li>
                         <li><a href="#formulad" data-transition="fade" data-corners="false" data-theme="a">Formula Dé</a></li>
-                        <li><a href="#" data-transition="fade" data-corners="false" data-theme="a">History</a></li>
+                        <li><a href="#" data-transition="fade" data-corners="false" data-theme="a">Logger</a></li>
                     </ul>
                 </div><!-- /navbar -->
                 
             </div><!-- /header -->
             <div data-role="content">	
                 <form>
-                    <input type="button" data-theme="a" data-icon="refresh" value="Refresh History" onclick="javascript:history.value=localStorage.logger;">
-		    <input type="button" data-theme="a" data-icon="delete" value="Clear History" onclick="javascript:init();">
+                    <input type="button" data-theme="a" data-icon="refresh" value="Refresh Log" onclick="javascript:history.value=localStorage.logger;">
+		    <input type="button" data-theme="a" data-icon="delete" value="Clear Log" onclick="javascript:init();history.value='';">
                         <textarea name="history" rows="30" readonly="true">&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#13;</textarea>	
                 </form>
             </div><!-- /content -->
@@ -158,7 +158,7 @@
                 <p align="justify">
                 <b>Author:</b> Daniele Veneroni<br>
                 <b>Company:</b> Venerons Laboratories<br>
-                <b>Version:</b> 1.5.0<br><br>
+                <b>Version:</b> 2.0.0<br><br>
                 <b>About:</b><br>
                 iRoller it's a smartphone Web Application to roll d20 System Dice and Formula Dé Dice.<br><br>
                 <b>Contacts:</b><br>

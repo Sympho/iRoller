@@ -10,7 +10,7 @@ function init() {
     }
 }
 
-function d(n, risultato) {
+function d(n) {
     var oggi = new Date();
     var log = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "] ";
     var ris = "1d" + n + ": ";
@@ -19,10 +19,11 @@ function d(n, risultato) {
     try {
         localStorage.logger = log + "\n" + localStorage.logger;
     } catch(err) {}
-    risultato.value = ris;
+    ris = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br /><b><h1>" + ris + "</h1></b>";
+    document.getElementById("risultatod20").innerHTML = ris;
 }
 
-function coin(risultato) {
+function coin() {
     var oggi = new Date();
     var log = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "] ";
     var ris = "Coin: ";
@@ -33,10 +34,11 @@ function coin(risultato) {
     try {
         localStorage.logger = log + "\n" + localStorage.logger;
     } catch(err) {}
-    risultato.value = ris;
+    ris = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br /><b><h1>" + ris + "</h1></b>";
+    document.getElementById("risultatod20").innerHTML = ris;
 }
 
-function custom(num, facce, risultato) {
+function custom(num, facce) {
     var oggi = new Date();
     var log = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "] " + num.value + "d" + facce.value + ": ";
     var ris = num.value + "d" + facce.value + ": ";
@@ -50,38 +52,45 @@ function custom(num, facce, risultato) {
     try {
         localStorage.logger = log + "\n" + localStorage.logger;
     } catch(err) {}
-    risultato.value = ris;
+    ris = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br /><b><h1>" + num.value + "d" + facce.value + ": " + somma + "</h1></b>";
+    document.getElementById("risultatocustom").innerHTML = ris;
 }
 
-function marcia(num, spostamento) {
-    var oggi = new Date();
-    var log = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "] ";
+function marcia(num) {
     var ris = "";
+    var d = 0;
+    var oggi = new Date();
+    var log = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br />"
     switch (num) {
         case 1:
-            ris = "1st Gear: " + (Math.floor(Math.random() * 2) + 1);
+            d = (Math.floor(Math.random() * 2) + 1);
+            ris = log + "<b>1st Gear<br /><h1>" + d + "</h1></b>";
             break;
         case 2:
-            ris = "2nd Gear: " + (Math.floor(Math.random() * 3) + 2);
+            d = (Math.floor(Math.random() * 3) + 2);
+            ris = log + "<b>2nd Gear<br /><h1>" + d + "</h1></b>";
             break;
         case 3:
-            ris = "3rd Gear: " + (Math.floor(Math.random() * 5) + 4);
+            d = (Math.floor(Math.random() * 5) + 4);
+            ris = log + "<b>3rd Gear<br /><h1>" + d + "</h1></b>";
             break;
         case 4:
-            ris = "4th Gear: " + (Math.floor(Math.random() * 6) + 7);
+            d = (Math.floor(Math.random() * 6) + 7);
+            ris = log + "<b>4th Gear<br /><h1>" + d + "</h1></b>";
             break;
         case 5:
-            ris = "5th Gear: " + (Math.floor(Math.random() * 10) + 11);
+            d = (Math.floor(Math.random() * 10) + 11);
+            ris = log + "<b>5th Gear<br /><h1>" + d + "</h1></b>";
             break;
         case 6:
-            ris = "6th Gear: " + (Math.floor(Math.random() * 10) + 21);
+            d = (Math.floor(Math.random() * 10) + 21);
+            ris = log + "<b>6th Gear<br /><h1>" + d + "</h1></b>";
             break;
         default:
-            alert("Errore");
+            alert("Errore nella determinazione della marcia");
     }
-    log += ris;
+    document.getElementById("risultatofd").innerHTML = ris;
     try {
-        localStorage.logger = log + "\n" + localStorage.logger;
+        localStorage.logger = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]     " + num + " Gear:     " + d + "\n" + localStorage.logger;
     } catch(err) {}
-    spostamento.value = ris;
 }
