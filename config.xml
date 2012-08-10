@@ -2,8 +2,8 @@
 	<widget xmlns = "http://www.w3.org/ns/widgets"
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		id = "org.veneronslabs.iroller"
-		version = "2.0.0"
-		versionCode = "10">
+		version = "2.1.0"
+		versionCode = "11">
 
     <name>iRoller</name>
 
@@ -58,7 +58,7 @@
 
 	<!-- GENERAL PREFERENCES -->    
     
-	<preference name="phonegap-version" value="1.9.0" /> <!-- versione di phonegap usata -->
+	<preference name="phonegap-version" value="2.0.0" /> <!-- versione di phonegap usata -->
 	<preference name="orientation" value="default" />
 	<preference name="target-device" value="universal" />
 	<preference name="fullscreen" value="true" /> <!-- toglie la barra in alto su iOS e Android -->
