@@ -94,3 +94,51 @@ function marcia(num) {
         localStorage.logger = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]     " + num + " Gear:     " + d + "\n" + localStorage.logger;
     } catch(err) {}
 }
+
+function catan(num) {
+    var d = 0;
+    var oggi = new Date();
+    document.getElementById("risultatocatan").innerHTML = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br /><br />"
+    var i = 0;
+    while (i<num) {
+        d = (Math.floor(Math.random() * 6) + 1);
+        document.getElementById("risultatocatan").innerHTML = document.getElementById("risultatocatan").innerHTML + "<img src=\"lib/images/catan/" + d + ".png\">&nbsp;";
+        i++;
+    }
+}
+
+function memoir44(num) {
+    var d = 0;
+    var oggi = new Date();
+    document.getElementById("risultatomemoir44").innerHTML = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br /><br />"
+    var i = 0;
+    while (i<num) {
+        d = (Math.floor(Math.random() * 6) + 1);
+        document.getElementById("risultatomemoir44").innerHTML = document.getElementById("risultatomemoir44").innerHTML + "<img src=\"lib/images/memoir44/" + d + ".png\">&nbsp;";
+        i++;
+    }
+}
+
+function battlelore(num) {
+    var d = 0;
+    var oggi = new Date();
+    document.getElementById("risultatobattlelore").innerHTML = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br /><br />"
+    var i = 0;
+    while (i<num) {
+        d = (Math.floor(Math.random() * 6) + 1);
+        document.getElementById("risultatobattlelore").innerHTML = document.getElementById("risultatobattlelore").innerHTML + "<img src=\"lib/images/battlelore/" + d + ".png\">&nbsp;";
+        i++;
+    }
+}
+
+function ancients(num) {
+    var d = 0;
+    var oggi = new Date();
+    document.getElementById("risultatoancients").innerHTML = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br /><br />"
+    var i = 0;
+    while (i<num) {
+        d = (Math.floor(Math.random() * 6) + 1);
+        document.getElementById("risultatoancients").innerHTML = document.getElementById("risultatoancients").innerHTML + "<img src=\"lib/images/ancients/" + d + ".png\">&nbsp;";
+        i++;
+    }
+}
