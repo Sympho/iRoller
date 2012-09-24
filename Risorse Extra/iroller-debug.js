@@ -142,3 +142,15 @@ function ancients(num) {
         i++;
     }
 }
+
+function westeros(num) {
+    var d = 0;
+    var oggi = new Date();
+    document.getElementById("risultatowesteros").innerHTML = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br /><br />"
+    var i = 0;
+    while (i<num) {
+        d = (Math.floor(Math.random() * 8) + 1);
+        document.getElementById("risultatowesteros").innerHTML = document.getElementById("risultatowesteros").innerHTML + "<img src=\"lib/images/westeros/" + d + ".png\">&nbsp;";
+        i++;
+    }
+}

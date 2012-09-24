@@ -6,8 +6,8 @@
         <!-- WEB SEARCH META TAGS -->
         <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
         <meta content="index,follow" name="robots" />
-        <meta content="Android,Web,App,iPod,iPhone,iPad,iRoller,Roll,Dice,d20,System,Formula,D,De,Dè,Dé,Roller,D&D,DnD,DeD,Dungeons,Dragons" name="Keywords" />
-        <meta content="A Smartphone Web Application to roll d20 System Dice and Formula Dé Dice" name="Description" />
+        <meta content="Android,Web,App,iPod,iPhone,iPad,iRoller,Roll,Dice,d20,System,Formula,D,De,Dè,Dé,Roller,D&D,DnD,DeD,Dungeons,Dragons,Memoir,44,Battlelore,C&C,Ancients,Catan,Battles,Westeros,Ticket,Ride" name="Keywords" />
+        <meta content="A Web Application to roll dice for various game systems." name="Description" />
         
         <!-- SAFARI WEB APP META TAGS -->
         <meta content="yes" name="apple-mobile-web-app-capable" />
@@ -53,14 +53,25 @@
             
             <div data-role="content" data-theme="c">
                 <ul data-role="listview" data-inset="true" data-theme="a" data-filter="true" data-filter-placeholder="Search...">
-                    <li data-role="list-divider">Game System</li>
+                    <li data-role="list-divider">d20 System</li>
                     <li><a href="#d20" data-transition="slide">d20 System</a></li>
                     <li><a href="#custom" data-transition="slide">Custom Dice</a></li>
+                    
+                    <li data-role="list-divider">Formula Dé System</li>
                     <li><a href="#formulad" data-transition="slide">Formula Dé</a></li>
+                    
+                    <li data-role="list-divider">Catan System</li>
                     <li><a href="#catan" data-transition="slide">Catan: The Dice Game</a></li>
+                    
+                    <li data-role="list-divider">Ticket to Ride System</li>
+                    <li><a href="#tickettoride" data-transition="slide">Ticket to Ride: The Dice Expansion</a></li>
+                    
+                    <li data-role="list-divider">Command &amp; Colors System</li>
                     <li><a href="#memoir44" data-transition="slide">Memoir '44</a></li>
                     <li><a href="#battlelore" data-transition="slide">BattleLore</a></li>
                     <li><a href="#ancients" data-transition="slide">C&amp;C: Ancients</a></li>
+                    <li><a href="#westeros" data-transition="slide">Battles of Westeros</a></li>
+                    
                     <li data-role="list-divider">Utility</li>
                     <li><a href="#logger" data-transition="slide">Logger</a></li>
                 </ul>
@@ -250,6 +261,58 @@
         </div><!-- /page -->
         
         
+        <!-- PAGINA BATTLES OF WESTEROS -->
+        <div data-role="page" id="westeros">
+            <div data-role="header" data-theme="a" data-position="inline" data-id="barra">
+                <a href="#home" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-theme="a" /></a>
+                <h1>Battles of Westeros</h1>
+            </div><!-- /header -->
+            <div data-role="content">
+                <form>
+                    <p align="center" id="risultatowesteros">Select the number of dice to roll</p>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="1 Dice" onclick="westeros(1)"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="2 Dice" onclick="westeros(2)"></div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="3 Dice" onclick="westeros(3)"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="4 Dice" onclick="westeros(4)"></div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="5 Dice" onclick="westeros(5)"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="6 Dice" onclick="westeros(6)"></div>
+                    </div>
+                </form>
+            </div><!-- /content -->
+        </div><!-- /page -->
+        
+        
+        <!-- PAGINA TICKET TO RIDE DICE EXPANSION -->
+        <div data-role="page" id="tickettoride">
+            <div data-role="header" data-theme="a" data-position="inline" data-id="barra">
+                <a href="#home" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-theme="a" /></a>
+                <h1>Ticket to Ride: The Dice Expansion</h1>
+            </div><!-- /header -->
+            <div data-role="content">
+                <form>
+                    <p align="center" id="risultatotickettoridetrain">Select the number of TRAIN dice to roll</p>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="1 Dice" onclick="tickettoridetrain(1)"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="2 Dice" onclick="tickettoridetrain(2)"></div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="3 Dice" onclick="tickettoridetrain(3)"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="4 Dice" onclick="tickettoridetrain(4)"></div>
+                    </div>
+                    <input type="button" data-theme="a" value="5 Dice" onclick="tickettoridetrain(5)">
+                    <hr />
+                    <p align="center" id="risultatotickettoridetunnel">Select the number of TUNNEL dice to roll</p>
+                    <input type="button" data-theme="a" value="3 Dice" onclick="tickettoridetunnel(3)">
+                </form>
+            </div><!-- /content -->
+        </div><!-- /page -->
+        
+        
         <!-- PAGINA LOGGER -->
         <div data-role="page" id="logger">
             <div data-role="header" data-theme="a" data-position="inline" data-id="barra">
@@ -276,9 +339,9 @@
                 <p align="justify">
                 <strong>Author:</strong> Daniele Veneroni<br />
                 <strong>Company:</strong> Venerons Laboratories<br />
-                <strong>Version:</strong> 3.0.0<br /><br />
+                <strong>Version:</strong> 3.1.0<br /><br />
                 <strong>About:</strong><br />
-                iRoller it's a smartphone Web Application to roll dice for various game systems.<br /><br />
+                iRoller it's a Web Application to roll dice for various game systems.<br /><br />
                 <strong>Contacts:</strong><br />
                 For more information about the project iRoller please visit the website <a href="http://veneronslabs.wordpress.com/">Venerons Laboratories</a>.
                 </p>

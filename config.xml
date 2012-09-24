@@ -2,13 +2,13 @@
 	<widget xmlns = "http://www.w3.org/ns/widgets"
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		id = "org.veneronslabs.iroller"
-		version = "3.0.0"
-		versionCode = "12">
+		version = "3.1.0"
+		versionCode = "13">
 
     <name>iRoller</name>
 
     <description>
-        A Smartphone Web Application to roll d20 System Dice and Formula Dé Dice
+        A Web Application to roll dice for various dice systems and table games.
     </description>
 
     <author href="http://veneronslabs.wordpress.com" email="veneronslaboratories@gmail.com">
