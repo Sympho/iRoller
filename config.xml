@@ -2,8 +2,8 @@
 	<widget xmlns = "http://www.w3.org/ns/widgets"
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		id = "org.veneronslabs.iroller"
-		version = "3.1.0"
-		versionCode = "13">
+		version = "3.1.1"
+		versionCode = "14">
 
     <name>iRoller</name>
 
@@ -21,9 +21,9 @@
         <icon src="icon.png" /> <!-- default 72 pixels -->
         
         <icon src="icons/ios/icon.png" width="57" height="57" /> <!-- iPhone 3G, iPhone 3GS, iPod Touch 2G, 3G -->
-        <icon src="icons/ios/icon72.png" gap:platform="ios" width="72" height="72" /> <!-- iPad, iPad 2-->
+        <icon src="icons/ios/icon72.png" gap:platform="ios" width="72" height="72" /> <!-- iPad, iPad 2, iPad mini -->
         <icon src="icons/ios/icon114.png" width="114" height="114" /> <!-- iPhone 4, iPhone 4S, iPod Touch 4G -->
-        <icon src="icons/ios/icon144.png" width="144" height="144" /> <!-- iPad 3 -->
+        <icon src="icons/ios/icon144.png" width="144" height="144" /> <!-- iPad 3, iPad 4 -->
         
         <icon src="icons/android/ldpi.png" gap:platform="android" gap:density="ldpi" /> <!-- 36 pixels -->
         <icon src="icons/android/mdpi.png" gap:platform="android" gap:density="mdpi" /> <!-- 48 pixels -->
@@ -43,10 +43,11 @@
         
         <gap:splash src="splash.png" /> <!-- default 320x480 pixels -->
         
-        <gap:splash src="splash/ios/iPadLandscape.png" width="1024" height="768" />
-        <gap:splash src="splash/ios/iPadPortrait.png" width="768" height="1024" />
-        <gap:splash src="splash/ios/iPhoneDefault.png" width="320" height="480" />
-        <gap:splash src="splash/ios/iPhoneRetina.png" width="640" height="960" />
+        <gap:splash src="splash/ios/iPadLandscape.png" gap:platform="ios" width="1024" height="768" /> <!-- iPad 1, iPad 2, iPad mini -->
+        <gap:splash src="splash/ios/iPadPortrait.png" gap:platform="ios" width="768" height="1024" /> <!-- iPad 1, iPad 2, iPad mini -->
+        <gap:splash src="splash/ios/iPhoneDefault.png" gap:platform="ios" width="320" height="480" /> <!-- iPhone 3G, iPod Touch 2 -->
+        <gap:splash src="splash/ios/iPhoneRetina.png" gap:platform="ios" width="640" height="960" /> <!-- iPhone 4, iPhone 4S, iPod Touch 4 -->
+        <gap:splash src="splash/ios/iPhone5.png" gap:platform="ios" width="640" height="1136" /> <!-- iPhone 5, iPod Touch 5 -->
         
         <gap:splash src="splash/android/ldpi.png" gap:platform="android" gap:density="ldpi" /> <!-- 200x320 -->
         <gap:splash src="splash/android/mdpi.png" gap:platform="android" gap:density="mdpi" /> <!-- 320x480 -->
@@ -61,7 +62,7 @@
         
         <!-- GENERAL PREFERENCES -->
         
-        <preference name="phonegap-version" value="2.0.0" /> <!-- versione di phonegap usata -->
+        <preference name="phonegap-version" value="2.1.0" /> <!-- versione di phonegap usata -->
         <preference name="orientation" value="default" /> <!-- entrambe supportate -->
         <preference name="target-device" value="universal" />
         <preference name="fullscreen" value="true" /> <!-- toglie la barra in alto su iOS e Android -->

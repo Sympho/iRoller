@@ -4,7 +4,7 @@
         <title>iRoller</title> 
         
         <!-- WEB SEARCH META TAGS -->
-        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+        <meta charset="UTF-8">
         <meta content="index,follow" name="robots" />
         <meta content="Android,Web,App,iPod,iPhone,iPad,iRoller,Roll,Dice,d20,System,Formula,D,De,Dè,Dé,Roller,D&D,DnD,DeD,Dungeons,Dragons,Memoir,44,Battlelore,C&C,Ancients,Catan,Battles,Westeros,Ticket,Ride" name="Keywords" />
         <meta content="A Web Application to roll dice for various game systems." name="Description" />
@@ -12,17 +12,25 @@
         <!-- SAFARI WEB APP META TAGS -->
         <meta content="yes" name="apple-mobile-web-app-capable" />
         <meta content="black" name="apple-mobile-web-app-status-bar-style" />
-        <link href="icons/ios/icon57.png" sizes="57x57" rel="apple-touch-icon" />
-        <link href="icons/ios/icon72.png" sizes="72x72" rel="apple-touch-icon" />
-        <link href="icons/ios/icon114.png" sizes="114x114" rel="apple-touch-icon" />
-        <link href="splash/ios/iPhoneDefault.png" rel="apple-touch-startup-image" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <!-- iOS web app icons -->
+        <link href="icons/ios/icon57.png" sizes="57x57" rel="apple-touch-icon" /> <!-- iPhone non-retina 57x57 -->
+        <link href="icons/ios/icon72.png" sizes="72x72" rel="apple-touch-icon" /> <!-- iPad non-retina 72x72 -->
+        <link href="icons/ios/icon114.png" sizes="114x114" rel="apple-touch-icon" /> <!-- iPhone retina 114x114 -->
+        <link href="icons/ios/icon144.png" sizes="144x144" rel="apple-touch-icon"/> <!-- iPad retina 144x144 -->
+        <!-- iOS web app spash screens -->
+        <link rel="apple-touch-startup-image" href="splash/ios/splash-320x460.jpg" media="(device-width: 320px)" /> <!-- iPhone standard resolution 320x460 (landscape not needed because all web apps start portrait on iPhone) -->
+        <link rel="apple-touch-startup-image" href="splash/ios/splash-640x920.jpg" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)" /> <!-- iPhone high resolution (retina) 640x920 pixels (landscape not needed because all web apps start portrait on iPhone) -->
+        <link rel="apple-touch-startup-image" href="splash/ios/splash-768x1004.jpg" media="(device-width: 768px) and (orientation: portrait)" /> <!-- iPad Portrait 768x1004 -->
+        <link rel="apple-touch-startup-image" href="splash/ios/splash-748x1024.jpg" media="(device-width: 768px) and (orientation: landscape)" /> <!-- iPad Landscape 748x1024 (yes, a portrait image but with content rotated 90 degrees - allows 20px for status bar) -->
+        <link rel="apple-touch-startup-image" href="splash/ios/splash-1536x2008.jpg" media="(device-width: 768px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" /> <!-- iPad retina Portrait 1536x2008 -->
+        <link rel="apple-touch-startup-image" href="splash/ios/splash-1496x2048.jpg" media="(device-width: 768px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" /> <!-- iPad retina Landscape 1496x2048 (yes, a portrait image but with content rotated 90 degrees - allows 40px for status bar) -->
             
         <!-- JQUERY MOBILE FRAMEWORK META TAGS -->
         <link rel="stylesheet" href="lib/formulade.css" />
-        <link rel="stylesheet" href="lib/jquery.mobile-1.1.1.css" />
-        <script src="lib/jquery-1.7.1.js"></script>
-        <script src="lib/jquery.mobile-1.1.1.js"></script>
+        <link rel="stylesheet" href="lib/jquery.mobile.css" /> <!-- actual version: 1.2.0 -->
+        <script src="lib/jquery.js"></script> <!-- actual version: 1.8.2 -->
+        <script src="lib/jquery.mobile.js"></script> <!-- actual version: 1.2.0 -->
             
         <!-- ADD2HOME META TAGS -->
         <script type="application/javascript" src="lib/add2home.js"></script>
@@ -339,7 +347,7 @@
                 <p align="justify">
                 <strong>Author:</strong> Daniele Veneroni<br />
                 <strong>Company:</strong> Venerons Laboratories<br />
-                <strong>Version:</strong> 3.1.0<br /><br />
+                <strong>Version:</strong> 3.1.1<br /><br />
                 <strong>About:</strong><br />
                 iRoller it's a Web Application to roll dice for various game systems.<br /><br />
                 <strong>Contacts:</strong><br />
