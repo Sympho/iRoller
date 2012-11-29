@@ -1,6 +1,6 @@
 # iRoller
 
-iRoller it's an open source web application to roll dice for various game system like
+iRoller it's an open source web application to roll dice for various game system like:
 
 * d20 System 
 * Custom Dice

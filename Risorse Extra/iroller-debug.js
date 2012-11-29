@@ -1,5 +1,6 @@
 /*!
  * iRoller functions
+ * Copyright (c) 2012 Daniele Veneroni. Released under MIT License
  */
 function init() {
     try {
