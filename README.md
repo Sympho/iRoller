@@ -16,8 +16,9 @@ The application is formatted to be wrapped on a stand-alone application using Ph
 
 ## Supported Platforms:
 
-    * **Android** - [Play Store](https://play.google.com/store/apps/details?id=org.veneronslabs.iroller), [apk](https://build.phonegap.com/apps/74728/download/android/?qr_key=kF1RCDByYZMVQLC3e2pr)
-    * **Windows Phone** - [xap](https://build.phonegap.com/apps/74728/download/winphone/?qr_key=kF1RCDByYZMVQLC3e2pr)
-    * **BlackBerry** - [OTA Install](https://build.phonegap.com/apps/74728/download/blackberry/?qr_key=kF1RCDByYZMVQLC3e2pr)
-    * **WebOS** - [ipk](https://build.phonegap.com/apps/74728/download/webos/?qr_key=kF1RCDByYZMVQLC3e2pr)
-    * **Symbian** - [wgz](https://build.phonegap.com/apps/74728/download/symbian/?qr_key=kF1RCDByYZMVQLC3e2pr)
+* **Web App** - [iRoller](http://iroller.venerons.altervista.org)
+* **Android** - [Play Store](https://play.google.com/store/apps/details?id=org.veneronslabs.iroller), [apk](https://build.phonegap.com/apps/74728/download/android/?qr_key=kF1RCDByYZMVQLC3e2pr)
+* **Windows Phone** - [xap](https://build.phonegap.com/apps/74728/download/winphone/?qr_key=kF1RCDByYZMVQLC3e2pr)
+* **BlackBerry** - [OTA Install](https://build.phonegap.com/apps/74728/download/blackberry/?qr_key=kF1RCDByYZMVQLC3e2pr)
+* **WebOS** - [ipk](https://build.phonegap.com/apps/74728/download/webos/?qr_key=kF1RCDByYZMVQLC3e2pr)
+* **Symbian** - [wgz](https://build.phonegap.com/apps/74728/download/symbian/?qr_key=kF1RCDByYZMVQLC3e2pr)
