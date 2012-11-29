@@ -1,5 +1,7 @@
 # iRoller
 
+_Copyright (c) 2012 Daniele Veneroni. Released under MIT License._
+
 iRoller it's an open source web application to roll dice for various game system like:
 
 * d20 System 
@@ -12,7 +14,7 @@ iRoller it's an open source web application to roll dice for various game system
 * C&C: Ancients
 * Battles of Westeros
 
-The application is formatted to be wrapped on a stand-alone application using PhoneGap Build, so it's available for iOS, Android, Windows Phone 7, BlackBerry, WebOS and Symbian.
+The application is formatted to be easly wrapped on a stand-alone application using PhoneGap Build, so it's available for iOS, Android, Windows Phone 7, BlackBerry, WebOS and Symbian.
 
 ## Supported Platforms:
 
