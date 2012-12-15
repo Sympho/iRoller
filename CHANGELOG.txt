@@ -2,6 +2,11 @@ iRoller Changelog
 
 Copyright (c) 2012 Daniele Veneroni. Released under MIT License
 
+Version 3.1.2
+
+• Update to PhoneGap 2.2.0
+• New splash screens
+
 Version 3.1.1
 
 • Updated to PhoneGap 2.1.0
