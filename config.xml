@@ -43,11 +43,11 @@
         
     <gap:splash src="splash.png" /> <!-- default 320x480 pixels -->
         
-    <gap:splash src="splash/ios/iPadLandscape.png" gap:platform="ios" width="1024" height="768" /> <!-- iPad 1, iPad 2, iPad mini -->
-    <gap:splash src="splash/ios/iPadPortrait.png" gap:platform="ios" width="768" height="1024" /> <!-- iPad 1, iPad 2, iPad mini -->
-    <gap:splash src="splash/ios/iPhoneDefault.png" gap:platform="ios" width="320" height="480" /> <!-- iPhone 3G, iPod Touch 2 -->
-    <gap:splash src="splash/ios/iPhoneRetina.png" gap:platform="ios" width="640" height="960" /> <!-- iPhone 4, iPhone 4S, iPod Touch 4 -->
-    <gap:splash src="splash/ios/iPhone5.png" gap:platform="ios" width="640" height="1136" /> <!-- iPhone 5, iPod Touch 5 -->
+    <gap:splash src="splash/ios/splash-1024x768.png" width="1024" height="768" /> <!-- iPad 1, iPad 2, iPad mini -->
+    <gap:splash src="splash/ios/splash-768x1024.png" width="768" height="1024" /> <!-- iPad 1, iPad 2, iPad mini -->
+    <gap:splash src="splash/ios/splash-320x480.png" width="320" height="480" /> <!-- iPhone 3G, iPhone 3GS, iPod Touch 2, iPod Touch 3 -->
+    <gap:splash src="splash/ios/splash-640x960.png" width="640" height="960" /> <!-- iPhone 4, iPhone 4S, iPod Touch 4 -->
+    <gap:splash src="splash/ios/splash-640x1136.png" width="640" height="1136" /> <!-- iPhone 5, iPod Touch 5 -->
         
     <gap:splash src="splash/android/ldpi.png" gap:platform="android" gap:density="ldpi" /> <!-- 200x320 -->
     <gap:splash src="splash/android/mdpi.png" gap:platform="android" gap:density="mdpi" /> <!-- 320x480 -->
