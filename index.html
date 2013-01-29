@@ -1,117 +1,361 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=640" />
-
-    <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
-    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
-
-    <script type="text/javascript" src="javascripts/modernizr.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $('#main_content').headsmart()
-      })
-    </script>
-    <title>iRoller by Venerons</title>
-  </head>
-
-  <body>
-    <a id="forkme_banner" href="https://github.com/Venerons/iRoller">View on GitHub</a>
-    <div class="shell">
-
-      <header>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <h1>iRoller</h1>
-            <h2>iRoller it's a Web Application to roll dice for various game systems.</h2>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-      </header>
-
-      <section id="downloads">
-        <span class="inner">
-          <a href="https://github.com/Venerons/iRoller/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/Venerons/iRoller/tarball/master" class="tgz"><em>download</em> .TGZ</a>
-        </span>
-      </section>
-
-
-      <span class="banner-fix"></span>
-
-
-      <section id="main_content">
-        <h1>iRoller</h1>
-
-<p><em>Copyright (c) 2012 Daniele Veneroni. Released under MIT License.</em></p>
-
-<p>iRoller it's an open source web application to roll dice for various game system like:</p>
-
-<ul>
-<li>d20 System </li>
-<li>Custom Dice</li>
-<li>Formula Dé</li>
-<li>Catan: The Dice Game</li>
-<li>Ticket to Ride: The Dice Expansion</li>
-<li>Memoir '44</li>
-<li>BattleLore</li>
-<li>C&amp;C: Ancients</li>
-<li>Battles of Westeros</li>
-</ul><p>The application is formatted to be easly wrapped on a stand-alone application using PhoneGap Build, so it's available for iOS, Android, Windows Phone 7, BlackBerry, WebOS and Symbian.</p>
-
-<h2>Supported Platforms:</h2>
-
-<ul>
-<li>
-<strong>Web App</strong> - <a href="http://iroller.venerons.altervista.org">iRoller</a>
-</li>
-<li>
-<strong>Android</strong> - <a href="https://play.google.com/store/apps/details?id=org.veneronslabs.iroller">Play Store</a>, <a href="https://build.phonegap.com/apps/74728/download/android/?qr_key=kF1RCDByYZMVQLC3e2pr">apk</a>
-</li>
-<li>
-<strong>Windows Phone</strong> - <a href="https://build.phonegap.com/apps/74728/download/winphone/?qr_key=kF1RCDByYZMVQLC3e2pr">xap</a>
-</li>
-<li>
-<strong>BlackBerry</strong> - <a href="https://build.phonegap.com/apps/74728/download/blackberry/?qr_key=kF1RCDByYZMVQLC3e2pr">OTA Install</a>
-</li>
-<li>
-<strong>WebOS</strong> - <a href="https://build.phonegap.com/apps/74728/download/webos/?qr_key=kF1RCDByYZMVQLC3e2pr">ipk</a>
-</li>
-<li>
-<strong>Symbian</strong> - <a href="https://build.phonegap.com/apps/74728/download/symbian/?qr_key=kF1RCDByYZMVQLC3e2pr">wgz</a>
-</li>
-</ul>
-      </section>
-
-      <footer>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <p>this project by <a href="https://github.com/Venerons">Venerons</a> can be found on <a href="https://github.com/Venerons/iRoller">GitHub</a></p>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
-        <span class="octocat"></span>
-      </footer>
-
-    </div>
-
-              <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-36690445-1");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
-
-  </body>
+<!-- Copyright (c) 2012 Daniele Veneroni. Released under MIT License -->
+<!DOCTYPE html> 
+<html> 
+	<head> 
+        <title>iRoller</title> 
+        
+        <!-- WEB SEARCH META TAGS -->
+        <meta charset="UTF-8">
+        <meta content="index,follow" name="robots" />
+        <meta content="Android,Web,App,iPod,iPhone,iPad,iRoller,Roll,Dice,d20,System,Formula,D,De,Dè,Dé,Roller,D&D,DnD,DeD,Dungeons,Dragons,Memoir,44,Battlelore,C&C,Ancients,Catan,Battles,Westeros,Ticket,Ride" name="Keywords" />
+        <meta content="A Web Application to roll dice for various game systems." name="Description" />
+        
+        <!-- SAFARI WEB APP META TAGS -->
+        <meta content="yes" name="apple-mobile-web-app-capable" />
+        <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <!-- iOS web app icons -->
+        <link href="icons/ios/icon57.png" sizes="57x57" rel="apple-touch-icon" /> <!-- iPhone non-retina 57x57 -->
+        <link href="icons/ios/icon72.png" sizes="72x72" rel="apple-touch-icon" /> <!-- iPad non-retina 72x72 -->
+        <link href="icons/ios/icon114.png" sizes="114x114" rel="apple-touch-icon" /> <!-- iPhone retina 114x114 -->
+        <link href="icons/ios/icon144.png" sizes="144x144" rel="apple-touch-icon"/> <!-- iPad retina 144x144 -->
+        <!-- iOS web app spash screens -->
+        <link rel="apple-touch-startup-image" href="splash/ios/splash-320x460.jpg" media="(device-width: 320px)" /> <!-- iPhone standard resolution 320x460 (landscape not needed because all web apps start portrait on iPhone) -->
+        <link rel="apple-touch-startup-image" href="splash/ios/splash-640x920.jpg" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)" /> <!-- iPhone high resolution (retina) 640x920 pixels (landscape not needed because all web apps start portrait on iPhone) -->
+        <link rel="apple-touch-startup-image" href="splash/ios/splash-768x1004.jpg" media="(device-width: 768px) and (orientation: portrait)" /> <!-- iPad Portrait 768x1004 -->
+        <link rel="apple-touch-startup-image" href="splash/ios/splash-748x1024.jpg" media="(device-width: 768px) and (orientation: landscape)" /> <!-- iPad Landscape 748x1024 (yes, a portrait image but with content rotated 90 degrees - allows 20px for status bar) -->
+        <link rel="apple-touch-startup-image" href="splash/ios/splash-1536x2008.jpg" media="(device-width: 768px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" /> <!-- iPad retina Portrait 1536x2008 -->
+        <link rel="apple-touch-startup-image" href="splash/ios/splash-1496x2048.jpg" media="(device-width: 768px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" /> <!-- iPad retina Landscape 1496x2048 (yes, a portrait image but with content rotated 90 degrees - allows 40px for status bar) -->
+            
+        <!-- JQUERY MOBILE FRAMEWORK META TAGS -->
+        <link rel="stylesheet" href="lib/formulade.css" />
+        <link rel="stylesheet" href="lib/jquery.mobile.css" /> <!-- actual version: 1.2.0 -->
+        <script src="lib/jquery.js"></script> <!-- actual version: 1.8.2 -->
+        <script src="lib/jquery.mobile.js"></script> <!-- actual version: 1.2.0 -->
+            
+        <!-- ADD2HOME META TAGS -->
+        <script type="application/javascript" src="lib/add2home.js"></script>
+        <link rel="stylesheet" href="lib/add2home.css">
+        <script type="text/javascript">
+            var addToHomeConfig = {
+                animationIn: 'drop',
+                animationOut: 'fade',
+                startDelay: 1000,
+                lifespan: 5000,
+                expire: 2,
+                touchIcon:true,
+            };
+        </script>
+            
+        <!-- APPLICATION SCRIPT -->
+        <script src="lib/iroller.js"></script>
+            
+    </head> 
+    <body onload="init()"> 
+        
+        <!-- PAGINA HOME -->
+        <div data-role="page" id="home">
+            <div data-role="header" data-theme="a" data-position="inline" data-id="barra">
+                <h1>iRoller</h1>
+                <a href="#about" data-icon="info" class="ui-btn-right" data-theme="a">Info</a>
+            </div><!-- /header -->
+            
+            <div data-role="content" data-theme="c">
+                <ul data-role="listview" data-inset="true" data-theme="a" data-filter="true" data-filter-placeholder="Search...">
+                    <li data-role="list-divider">d20 System</li>
+                    <li><a href="#d20" data-transition="slide">d20 System</a></li>
+                    <li><a href="#custom" data-transition="slide">Custom Dice</a></li>
+                    
+                    <li data-role="list-divider">Formula Dé System</li>
+                    <li><a href="#formulad" data-transition="slide">Formula Dé</a></li>
+                    
+                    <li data-role="list-divider">Catan System</li>
+                    <li><a href="#catan" data-transition="slide">Catan: The Dice Game</a></li>
+                    
+                    <li data-role="list-divider">Ticket to Ride System</li>
+                    <li><a href="#tickettoride" data-transition="slide">Ticket to Ride: The Dice Expansion</a></li>
+                    
+                    <li data-role="list-divider">Command &amp; Colors System</li>
+                    <li><a href="#memoir44" data-transition="slide">Memoir '44</a></li>
+                    <li><a href="#battlelore" data-transition="slide">BattleLore</a></li>
+                    <li><a href="#ancients" data-transition="slide">C&amp;C: Ancients</a></li>
+                    <li><a href="#westeros" data-transition="slide">Battles of Westeros</a></li>
+                    
+                    <li data-role="list-divider">Utility</li>
+                    <li><a href="#logger" data-transition="slide">Logger</a></li>
+                </ul>
+            </div><!-- /content -->
+        </div><!-- /page -->
+        
+        <!-- PAGINA D20 -->
+        <div data-role="page" id="d20">
+            <div data-role="header" data-theme="a" data-position="inline" data-id="barra">
+                <a href="#home" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-theme="a" /></a>
+                <h1>d20 System</h1>
+            </div><!-- /header -->
+            
+            <div data-role="content" data-theme="c">	
+                <form>
+                    <p align="center" id="risultatod20">Push a button to roll a dice</p>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="d4" onclick="d(4)"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="d6" onclick="d(6)"></div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="d8" onclick="d(8)"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="d10" onclick="d(10)"></div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="d12" onclick="d(12)"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="d20" onclick="d(20)"></div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="d100" onclick="d(100)"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="Coin" onclick="coin()"></div>
+                    </div>
+                
+                </form>
+            </div><!-- /content -->
+        </div><!-- /page -->
+        
+        
+        <!-- PAGINA CUSTOM -->
+        <div data-role="page" id="custom">
+            <div data-role="header" data-theme="a" data-position="inline" data-id="barra">
+                <a href="#home" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-theme="a" /></a>
+                <h1>Custom</h1>
+            </div><!-- /header -->
+            <div data-role="content">
+                <form>
+                <p align="center" id="risultatocustom">Set the dice and push Roll</p>
+                <div class="ui-grid-b">
+                    <div class="ui-block-a"><input name="num" type="number" min="1" max="100" value="1"></div>
+                    <div class="ui-block-b"><p align="center"><strong>d</strong></p></div>
+                    <div class="ui-block-c"><input name="facce" type="number" min="2" max="100" value="20"></div>
+                </div>
+                
+                <input type="button" data-theme="a" value="Roll" onclick="custom(num, facce)">
+                </form>
+                
+            </div><!-- /content -->
+        </div><!-- /page -->
+        
+        <!-- PAGINA FORMULAD -->
+        <div data-role="page" id="formulad">
+            <div data-role="header" data-theme="a" data-position="inline" data-id="barra">
+                <a href="#home" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-theme="a" /></a>
+                <h1>Formula Dé</h1>
+            </div><!-- /header -->
+            <div data-role="content">
+                <form>
+                    <p align="center" id="risultatofd">Select the gear to roll the dice</p>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a"><input type="button" data-theme="e" value="1st Gear (1 - 2)" onclick="marcia(1)"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="f" value="2nd Gear (2 - 4)" onclick="marcia(2)"></div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a"><input type="button" data-theme="g" value="3rd Gear (4 - 8)" onclick="marcia(3)"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="h" value="4th Gear (7 - 12)" onclick="marcia(4)"></div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a"><input type="button" data-theme="i" value="5th Gear (11 - 20)" onclick="marcia(5)"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="b" value="6th Gear (21 - 30)" onclick="marcia(6)"></div>
+                    </div>
+                </form>
+            </div><!-- /content -->
+        </div><!-- /page -->
+        
+        
+        <!-- PAGINA CATAN DICE -->
+        <div data-role="page" id="catan">
+            <div data-role="header" data-theme="a" data-position="inline" data-id="barra">
+                <a href="#home" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-theme="a" /></a>
+                <h1>Catan: The Dice Game</h1>
+            </div><!-- /header -->
+            <div data-role="content">
+                <form>
+                    <p align="center" id="risultatocatan">Select the number of dice to roll</p>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="1 Dice" onclick="catan(1)"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="2 Dice" onclick="catan(2)"></div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="3 Dice" onclick="catan(3)"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="4 Dice" onclick="catan(4)"></div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="5 Dice" onclick="catan(5)"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="6 Dice" onclick="catan(6)"></div>
+                    </div>
+                </form>
+            </div><!-- /content -->
+        </div><!-- /page -->
+        
+        
+        <!-- PAGINA MEMOIR '44 -->
+        <div data-role="page" id="memoir44">
+            <div data-role="header" data-theme="a" data-position="inline" data-id="barra">
+                <a href="#home" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-theme="a" /></a>
+                <h1>Memoir '44</h1>
+            </div><!-- /header -->
+            <div data-role="content">
+                <form>
+                    <p align="center" id="risultatomemoir44">Select the number of dice to roll</p>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="1 Dice" onclick="memoir44(1)"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="2 Dice" onclick="memoir44(2)"></div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="3 Dice" onclick="memoir44(3)"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="4 Dice" onclick="memoir44(4)"></div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="5 Dice" onclick="memoir44(5)"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="6 Dice" onclick="memoir44(6)"></div>
+                    </div>
+                </form>
+            </div><!-- /content -->
+        </div><!-- /page -->
+        
+        
+        <!-- PAGINA BATTLELORE -->
+        <div data-role="page" id="battlelore">
+            <div data-role="header" data-theme="a" data-position="inline" data-id="barra">
+                <a href="#home" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-theme="a" /></a>
+                <h1>BattleLore</h1>
+            </div><!-- /header -->
+            <div data-role="content">
+                <form>
+                    <p align="center" id="risultatobattlelore">Select the number of dice to roll</p>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="1 Dice" onclick="battlelore(1)"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="2 Dice" onclick="battlelore(2)"></div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="3 Dice" onclick="battlelore(3)"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="4 Dice" onclick="battlelore(4)"></div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="5 Dice" onclick="battlelore(5)"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="6 Dice" onclick="battlelore(6)"></div>
+                    </div>
+                </form>
+            </div><!-- /content -->
+        </div><!-- /page -->
+        
+        
+        <!-- PAGINA C&C: ANCIENTS -->
+        <div data-role="page" id="ancients">
+            <div data-role="header" data-theme="a" data-position="inline" data-id="barra">
+                <a href="#home" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-theme="a" /></a>
+                <h1>C&amp;C: Ancients</h1>
+            </div><!-- /header -->
+            <div data-role="content">
+                <form>
+                    <p align="center" id="risultatoancients">Select the number of dice to roll</p>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="1 Dice" onclick="ancients(1)"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="2 Dice" onclick="ancients(2)"></div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="3 Dice" onclick="ancients(3)"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="4 Dice" onclick="ancients(4)"></div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="5 Dice" onclick="ancients(5)"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="6 Dice" onclick="ancients(6)"></div>
+                    </div>
+                </form>
+            </div><!-- /content -->
+        </div><!-- /page -->
+        
+        
+        <!-- PAGINA BATTLES OF WESTEROS -->
+        <div data-role="page" id="westeros">
+            <div data-role="header" data-theme="a" data-position="inline" data-id="barra">
+                <a href="#home" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-theme="a" /></a>
+                <h1>Battles of Westeros</h1>
+            </div><!-- /header -->
+            <div data-role="content">
+                <form>
+                    <p align="center" id="risultatowesteros">Select the number of dice to roll</p>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="1 Dice" onclick="westeros(1)"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="2 Dice" onclick="westeros(2)"></div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="3 Dice" onclick="westeros(3)"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="4 Dice" onclick="westeros(4)"></div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="5 Dice" onclick="westeros(5)"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="6 Dice" onclick="westeros(6)"></div>
+                    </div>
+                </form>
+            </div><!-- /content -->
+        </div><!-- /page -->
+        
+        
+        <!-- PAGINA TICKET TO RIDE DICE EXPANSION -->
+        <div data-role="page" id="tickettoride">
+            <div data-role="header" data-theme="a" data-position="inline" data-id="barra">
+                <a href="#home" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-theme="a" /></a>
+                <h1>Ticket to Ride: The Dice Expansion</h1>
+            </div><!-- /header -->
+            <div data-role="content">
+                <form>
+                    <p align="center" id="risultatotickettoridetrain">Select the number of TRAIN dice to roll</p>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="1 Dice" onclick="tickettoridetrain(1)"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="2 Dice" onclick="tickettoridetrain(2)"></div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="3 Dice" onclick="tickettoridetrain(3)"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="4 Dice" onclick="tickettoridetrain(4)"></div>
+                    </div>
+                    <input type="button" data-theme="a" value="5 Dice" onclick="tickettoridetrain(5)">
+                    <hr />
+                    <p align="center" id="risultatotickettoridetunnel">Select the number of TUNNEL dice to roll</p>
+                    <input type="button" data-theme="a" value="3 Dice" onclick="tickettoridetunnel(3)">
+                </form>
+            </div><!-- /content -->
+        </div><!-- /page -->
+        
+        
+        <!-- PAGINA LOGGER -->
+        <div data-role="page" id="logger">
+            <div data-role="header" data-theme="a" data-position="inline" data-id="barra">
+                <a href="#home" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-theme="a" /></a>
+                <h1>Logger</h1>
+            </div><!-- /header -->
+            <div data-role="content">	
+                <form>
+                    <input type="button" data-theme="a" data-icon="refresh" value="Refresh Log" onclick="javascript:history.value=localStorage.logger;">
+		    <input type="button" data-theme="a" data-icon="delete" value="Clear Log" onclick="javascript:init();history.value='';">
+                        <textarea name="history" rows="30" readonly="true">&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#13;</textarea>	
+                </form>
+            </div><!-- /content -->
+        </div><!-- /page -->
+        
+        
+        <!-- PAGINA ABOUT -->
+        <div data-role="page" id="about">
+            <div data-role="header" data-theme="a" data-position="inline">
+                <a href="#home" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-theme="a" /></a>
+                <h1>About iRoller</h1>
+            </div>
+            <div data-role="content">
+                <p align="justify">
+                <strong>Author:</strong> Daniele Veneroni<br />
+                <strong>Company:</strong> Venerons Laboratories<br />
+                <strong>Version:</strong> 3.1.2<br /><br />
+                <strong>About:</strong><br />
+                iRoller it's a Web Application to roll dice for various game systems.<br /><br />
+                <strong>Contacts:</strong><br />
+                For more information about the project iRoller please visit the website <a href="http://veneronslabs.wordpress.com/">Venerons Laboratories</a>.
+                </p>
+            </div>
+        </div>
+        
+    </body>
 </html>
