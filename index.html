@@ -36,22 +36,12 @@
         <!-- ADD2HOME META TAGS -->
         <script type="application/javascript" src="lib/add2home.js"></script>
         <link rel="stylesheet" href="lib/add2home.css">
-        <script type="text/javascript">
-            var addToHomeConfig = {
-                animationIn: 'drop',
-                animationOut: 'fade',
-                startDelay: 1000,
-                lifespan: 5000,
-                expire: 2,
-                touchIcon:true,
-            };
-        </script>
             
         <!-- APPLICATION SCRIPT -->
         <script src="lib/iroller.js"></script>
             
     </head> 
-    <body onload="init()"> 
+    <body> 
         
         <!-- PAGINA HOME -->
         <div data-role="page" id="home">
@@ -63,7 +53,7 @@
             <div data-role="content" data-theme="c">
                 <ul data-role="listview" data-inset="true" data-theme="a" data-filter="true" data-filter-placeholder="Search...">
                     <li data-role="list-divider">d20 System</li>
-                    <li><a href="#d20" data-transition="slide">d20 System</a></li>
+                    <li><a href="#d20system" data-transition="slide">d20 System</a></li>
                     <li><a href="#custom" data-transition="slide">Custom Dice</a></li>
                     
                     <li data-role="list-divider">Formula Dé System</li>
@@ -88,30 +78,30 @@
         </div><!-- /page -->
         
         <!-- PAGINA D20 -->
-        <div data-role="page" id="d20">
+        <div data-role="page" id="d20system">
             <div data-role="header" data-theme="a" data-position="inline" data-id="barra">
-                <a href="#home" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-theme="a" /></a>
+                <a href="#home" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-theme="a"></a>
                 <h1>d20 System</h1>
             </div><!-- /header -->
             
             <div data-role="content" data-theme="c">	
                 <form>
-                    <p align="center" id="risultatod20">Push a button to roll a dice</p>
+                    <p align="center" id="risdiventi">Push a button to roll a dice</p>
                     <div class="ui-grid-a">
-                        <div class="ui-block-a"><input type="button" data-theme="a" value="d4" onclick="d(4)"></div>
-                        <div class="ui-block-b"><input type="button" data-theme="a" value="d6" onclick="d(6)"></div>
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="d4" id="d4"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="d6" id="d6"></div>
                     </div>
                     <div class="ui-grid-a">
-                        <div class="ui-block-a"><input type="button" data-theme="a" value="d8" onclick="d(8)"></div>
-                        <div class="ui-block-b"><input type="button" data-theme="a" value="d10" onclick="d(10)"></div>
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="d8" id="d8"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="d10" id="d10"></div>
                     </div>
                     <div class="ui-grid-a">
-                        <div class="ui-block-a"><input type="button" data-theme="a" value="d12" onclick="d(12)"></div>
-                        <div class="ui-block-b"><input type="button" data-theme="a" value="d20" onclick="d(20)"></div>
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="d12" id="d12"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="d20" id="d20"></div>
                     </div>
                     <div class="ui-grid-a">
-                        <div class="ui-block-a"><input type="button" data-theme="a" value="d100" onclick="d(100)"></div>
-                        <div class="ui-block-b"><input type="button" data-theme="a" value="Coin" onclick="coin()"></div>
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="d100" id="d100"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="Coin" id="coin"></div>
                     </div>
                 
                 </form>
@@ -122,20 +112,18 @@
         <!-- PAGINA CUSTOM -->
         <div data-role="page" id="custom">
             <div data-role="header" data-theme="a" data-position="inline" data-id="barra">
-                <a href="#home" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-theme="a" /></a>
+                <a href="#home" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-theme="a"></a>
                 <h1>Custom</h1>
             </div><!-- /header -->
             <div data-role="content">
-                <form>
                 <p align="center" id="risultatocustom">Set the dice and push Roll</p>
                 <div class="ui-grid-b">
-                    <div class="ui-block-a"><input name="num" type="number" min="1" max="100" value="1"></div>
+                    <div class="ui-block-a"><input id="num" type="number" min="1" max="100" value="1"></div>
                     <div class="ui-block-b"><p align="center"><strong>d</strong></p></div>
-                    <div class="ui-block-c"><input name="facce" type="number" min="2" max="100" value="20"></div>
+                    <div class="ui-block-c"><input id="facce" type="number" min="2" max="100" value="20"></div>
                 </div>
                 
-                <input type="button" data-theme="a" value="Roll" onclick="custom(num, facce)">
-                </form>
+                <input type="button" data-theme="a" value="Roll" id="custombutton">
                 
             </div><!-- /content -->
         </div><!-- /page -->
@@ -143,23 +131,23 @@
         <!-- PAGINA FORMULAD -->
         <div data-role="page" id="formulad">
             <div data-role="header" data-theme="a" data-position="inline" data-id="barra">
-                <a href="#home" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-theme="a" /></a>
+                <a href="#home" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-theme="a"></a>
                 <h1>Formula Dé</h1>
             </div><!-- /header -->
             <div data-role="content">
                 <form>
                     <p align="center" id="risultatofd">Select the gear to roll the dice</p>
                     <div class="ui-grid-a">
-                        <div class="ui-block-a"><input type="button" data-theme="e" value="1st Gear (1 - 2)" onclick="marcia(1)"></div>
-                        <div class="ui-block-b"><input type="button" data-theme="f" value="2nd Gear (2 - 4)" onclick="marcia(2)"></div>
+                        <div class="ui-block-a"><input type="button" data-theme="e" value="1st Gear (1 - 2)" id="marcia1"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="f" value="2nd Gear (2 - 4)" id="marcia2"></div>
                     </div>
                     <div class="ui-grid-a">
-                        <div class="ui-block-a"><input type="button" data-theme="g" value="3rd Gear (4 - 8)" onclick="marcia(3)"></div>
-                        <div class="ui-block-b"><input type="button" data-theme="h" value="4th Gear (7 - 12)" onclick="marcia(4)"></div>
+                        <div class="ui-block-a"><input type="button" data-theme="g" value="3rd Gear (4 - 8)" id="marcia3"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="h" value="4th Gear (7 - 12)" id="marcia4"></div>
                     </div>
                     <div class="ui-grid-a">
-                        <div class="ui-block-a"><input type="button" data-theme="i" value="5th Gear (11 - 20)" onclick="marcia(5)"></div>
-                        <div class="ui-block-b"><input type="button" data-theme="b" value="6th Gear (21 - 30)" onclick="marcia(6)"></div>
+                        <div class="ui-block-a"><input type="button" data-theme="i" value="5th Gear (11 - 20)" id="marcia5"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="b" value="6th Gear (21 - 30)" id="marcia6"></div>
                     </div>
                 </form>
             </div><!-- /content -->
@@ -169,23 +157,23 @@
         <!-- PAGINA CATAN DICE -->
         <div data-role="page" id="catan">
             <div data-role="header" data-theme="a" data-position="inline" data-id="barra">
-                <a href="#home" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-theme="a" /></a>
+                <a href="#home" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-theme="a"></a>
                 <h1>Catan: The Dice Game</h1>
             </div><!-- /header -->
             <div data-role="content">
                 <form>
                     <p align="center" id="risultatocatan">Select the number of dice to roll</p>
                     <div class="ui-grid-a">
-                        <div class="ui-block-a"><input type="button" data-theme="a" value="1 Dice" onclick="catan(1)"></div>
-                        <div class="ui-block-b"><input type="button" data-theme="a" value="2 Dice" onclick="catan(2)"></div>
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="1 Dice" id="catan1"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="2 Dice" id="catan2"></div>
                     </div>
                     <div class="ui-grid-a">
-                        <div class="ui-block-a"><input type="button" data-theme="a" value="3 Dice" onclick="catan(3)"></div>
-                        <div class="ui-block-b"><input type="button" data-theme="a" value="4 Dice" onclick="catan(4)"></div>
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="3 Dice" id="catan3"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="4 Dice" id="catan4"></div>
                     </div>
                     <div class="ui-grid-a">
-                        <div class="ui-block-a"><input type="button" data-theme="a" value="5 Dice" onclick="catan(5)"></div>
-                        <div class="ui-block-b"><input type="button" data-theme="a" value="6 Dice" onclick="catan(6)"></div>
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="5 Dice" id="catan5"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="6 Dice" id="catan6"></div>
                     </div>
                 </form>
             </div><!-- /content -->
@@ -195,23 +183,23 @@
         <!-- PAGINA MEMOIR '44 -->
         <div data-role="page" id="memoir44">
             <div data-role="header" data-theme="a" data-position="inline" data-id="barra">
-                <a href="#home" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-theme="a" /></a>
+                <a href="#home" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-theme="a"></a>
                 <h1>Memoir '44</h1>
             </div><!-- /header -->
             <div data-role="content">
                 <form>
                     <p align="center" id="risultatomemoir44">Select the number of dice to roll</p>
                     <div class="ui-grid-a">
-                        <div class="ui-block-a"><input type="button" data-theme="a" value="1 Dice" onclick="memoir44(1)"></div>
-                        <div class="ui-block-b"><input type="button" data-theme="a" value="2 Dice" onclick="memoir44(2)"></div>
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="1 Dice" id="memoir44-1"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="2 Dice" id="memoir44-2"></div>
                     </div>
                     <div class="ui-grid-a">
-                        <div class="ui-block-a"><input type="button" data-theme="a" value="3 Dice" onclick="memoir44(3)"></div>
-                        <div class="ui-block-b"><input type="button" data-theme="a" value="4 Dice" onclick="memoir44(4)"></div>
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="3 Dice" id="memoir44-3"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="4 Dice" id="memoir44-4"></div>
                     </div>
                     <div class="ui-grid-a">
-                        <div class="ui-block-a"><input type="button" data-theme="a" value="5 Dice" onclick="memoir44(5)"></div>
-                        <div class="ui-block-b"><input type="button" data-theme="a" value="6 Dice" onclick="memoir44(6)"></div>
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="5 Dice" id="memoir44-5"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="6 Dice" id="memoir44-6"></div>
                     </div>
                 </form>
             </div><!-- /content -->
@@ -221,23 +209,23 @@
         <!-- PAGINA BATTLELORE -->
         <div data-role="page" id="battlelore">
             <div data-role="header" data-theme="a" data-position="inline" data-id="barra">
-                <a href="#home" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-theme="a" /></a>
+                <a href="#home" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-theme="a"></a>
                 <h1>BattleLore</h1>
             </div><!-- /header -->
             <div data-role="content">
                 <form>
                     <p align="center" id="risultatobattlelore">Select the number of dice to roll</p>
                     <div class="ui-grid-a">
-                        <div class="ui-block-a"><input type="button" data-theme="a" value="1 Dice" onclick="battlelore(1)"></div>
-                        <div class="ui-block-b"><input type="button" data-theme="a" value="2 Dice" onclick="battlelore(2)"></div>
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="1 Dice" id="battlelore1"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="2 Dice" id="battlelore2"></div>
                     </div>
                     <div class="ui-grid-a">
-                        <div class="ui-block-a"><input type="button" data-theme="a" value="3 Dice" onclick="battlelore(3)"></div>
-                        <div class="ui-block-b"><input type="button" data-theme="a" value="4 Dice" onclick="battlelore(4)"></div>
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="3 Dice" id="battlelore3"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="4 Dice" id="battlelore4"></div>
                     </div>
                     <div class="ui-grid-a">
-                        <div class="ui-block-a"><input type="button" data-theme="a" value="5 Dice" onclick="battlelore(5)"></div>
-                        <div class="ui-block-b"><input type="button" data-theme="a" value="6 Dice" onclick="battlelore(6)"></div>
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="5 Dice" id="battlelore5"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="6 Dice" id="battlelore6"></div>
                     </div>
                 </form>
             </div><!-- /content -->
@@ -247,23 +235,23 @@
         <!-- PAGINA C&C: ANCIENTS -->
         <div data-role="page" id="ancients">
             <div data-role="header" data-theme="a" data-position="inline" data-id="barra">
-                <a href="#home" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-theme="a" /></a>
+                <a href="#home" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-theme="a"></a>
                 <h1>C&amp;C: Ancients</h1>
             </div><!-- /header -->
             <div data-role="content">
                 <form>
                     <p align="center" id="risultatoancients">Select the number of dice to roll</p>
                     <div class="ui-grid-a">
-                        <div class="ui-block-a"><input type="button" data-theme="a" value="1 Dice" onclick="ancients(1)"></div>
-                        <div class="ui-block-b"><input type="button" data-theme="a" value="2 Dice" onclick="ancients(2)"></div>
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="1 Dice" id="ancients1"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="2 Dice" id="ancients2"></div>
                     </div>
                     <div class="ui-grid-a">
-                        <div class="ui-block-a"><input type="button" data-theme="a" value="3 Dice" onclick="ancients(3)"></div>
-                        <div class="ui-block-b"><input type="button" data-theme="a" value="4 Dice" onclick="ancients(4)"></div>
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="3 Dice" id="ancients3"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="4 Dice" id="ancients4"></div>
                     </div>
                     <div class="ui-grid-a">
-                        <div class="ui-block-a"><input type="button" data-theme="a" value="5 Dice" onclick="ancients(5)"></div>
-                        <div class="ui-block-b"><input type="button" data-theme="a" value="6 Dice" onclick="ancients(6)"></div>
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="5 Dice" id="ancients5"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="6 Dice" id="ancients6"></div>
                     </div>
                 </form>
             </div><!-- /content -->
@@ -273,23 +261,23 @@
         <!-- PAGINA BATTLES OF WESTEROS -->
         <div data-role="page" id="westeros">
             <div data-role="header" data-theme="a" data-position="inline" data-id="barra">
-                <a href="#home" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-theme="a" /></a>
+                <a href="#home" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-theme="a"></a>
                 <h1>Battles of Westeros</h1>
             </div><!-- /header -->
             <div data-role="content">
                 <form>
                     <p align="center" id="risultatowesteros">Select the number of dice to roll</p>
                     <div class="ui-grid-a">
-                        <div class="ui-block-a"><input type="button" data-theme="a" value="1 Dice" onclick="westeros(1)"></div>
-                        <div class="ui-block-b"><input type="button" data-theme="a" value="2 Dice" onclick="westeros(2)"></div>
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="1 Dice" id="westeros1"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="2 Dice" id="westeros2"></div>
                     </div>
                     <div class="ui-grid-a">
-                        <div class="ui-block-a"><input type="button" data-theme="a" value="3 Dice" onclick="westeros(3)"></div>
-                        <div class="ui-block-b"><input type="button" data-theme="a" value="4 Dice" onclick="westeros(4)"></div>
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="3 Dice" id="westeros3"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="4 Dice" id="westeros4"></div>
                     </div>
                     <div class="ui-grid-a">
-                        <div class="ui-block-a"><input type="button" data-theme="a" value="5 Dice" onclick="westeros(5)"></div>
-                        <div class="ui-block-b"><input type="button" data-theme="a" value="6 Dice" onclick="westeros(6)"></div>
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="5 Dice" id="westeros5"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="6 Dice" id="westeros6"></div>
                     </div>
                 </form>
             </div><!-- /content -->
@@ -299,24 +287,24 @@
         <!-- PAGINA TICKET TO RIDE DICE EXPANSION -->
         <div data-role="page" id="tickettoride">
             <div data-role="header" data-theme="a" data-position="inline" data-id="barra">
-                <a href="#home" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-theme="a" /></a>
+                <a href="#home" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-theme="a"></a>
                 <h1>Ticket to Ride: The Dice Expansion</h1>
             </div><!-- /header -->
             <div data-role="content">
                 <form>
                     <p align="center" id="risultatotickettoridetrain">Select the number of TRAIN dice to roll</p>
                     <div class="ui-grid-a">
-                        <div class="ui-block-a"><input type="button" data-theme="a" value="1 Dice" onclick="tickettoridetrain(1)"></div>
-                        <div class="ui-block-b"><input type="button" data-theme="a" value="2 Dice" onclick="tickettoridetrain(2)"></div>
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="1 Dice" id="tickettoridetrain1"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="2 Dice" id="tickettoridetrain2"></div>
                     </div>
                     <div class="ui-grid-a">
-                        <div class="ui-block-a"><input type="button" data-theme="a" value="3 Dice" onclick="tickettoridetrain(3)"></div>
-                        <div class="ui-block-b"><input type="button" data-theme="a" value="4 Dice" onclick="tickettoridetrain(4)"></div>
+                        <div class="ui-block-a"><input type="button" data-theme="a" value="3 Dice" id="tickettoridetrain3"></div>
+                        <div class="ui-block-b"><input type="button" data-theme="a" value="4 Dice" id="tickettoridetrain4"></div>
                     </div>
-                    <input type="button" data-theme="a" value="5 Dice" onclick="tickettoridetrain(5)">
+                    <input type="button" data-theme="a" value="5 Dice" id="tickettoridetrain5">
                     <hr />
                     <p align="center" id="risultatotickettoridetunnel">Select the number of TUNNEL dice to roll</p>
-                    <input type="button" data-theme="a" value="3 Dice" onclick="tickettoridetunnel(3)">
+                    <input type="button" data-theme="a" value="3 Dice" id="tickettoridetunnel">
                 </form>
             </div><!-- /content -->
         </div><!-- /page -->
@@ -325,15 +313,13 @@
         <!-- PAGINA LOGGER -->
         <div data-role="page" id="logger">
             <div data-role="header" data-theme="a" data-position="inline" data-id="barra">
-                <a href="#home" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-theme="a" /></a>
+                <a href="#home" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-theme="a"></a>
                 <h1>Logger</h1>
             </div><!-- /header -->
-            <div data-role="content">	
-                <form>
-                    <input type="button" data-theme="a" data-icon="refresh" value="Refresh Log" onclick="javascript:history.value=localStorage.logger;">
-		    <input type="button" data-theme="a" data-icon="delete" value="Clear Log" onclick="javascript:init();history.value='';">
-                        <textarea name="history" rows="30" readonly="true">&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#13;</textarea>	
-                </form>
+            <div data-role="content">
+                <input type="button" data-theme="a" data-icon="refresh" value="Refresh Log" id="refreshlog">
+                <input type="button" data-theme="a" data-icon="delete" value="Clear Log" id="clearlog">
+                <textarea id="history" rows="30" readonly="true">&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#13;</textarea>	
             </div><!-- /content -->
         </div><!-- /page -->
         
@@ -341,14 +327,14 @@
         <!-- PAGINA ABOUT -->
         <div data-role="page" id="about">
             <div data-role="header" data-theme="a" data-position="inline">
-                <a href="#home" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-theme="a" /></a>
+                <a href="#home" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-theme="a"></a>
                 <h1>About iRoller</h1>
             </div>
             <div data-role="content">
                 <p align="justify">
                 <strong>Author:</strong> Daniele Veneroni<br />
                 <strong>Company:</strong> Venerons Laboratories<br />
-                <strong>Version:</strong> 3.1.2<br /><br />
+                <strong>Version:</strong> 3.1.3<br /><br />
                 <strong>About:</strong><br />
                 iRoller it's a Web Application to roll dice for various game systems.<br /><br />
                 <strong>Contacts:</strong><br />

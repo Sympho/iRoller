@@ -1,9 +1,10 @@
 {
     "name": "iRoller",
     "description": "Dice simulator for various game systems and board games",
-    "version": "3.1.2",
+    "version": "3.1.3",
     "type": "privileged",
     "launch_path": "/index.html",
+    "csp": "allow 'self'; script-src 'self' ; style-src 'self';",
     "icons": {
         "16": "/icons/webapp/icon16.png",
         "30": "/icons/webapp/icon30.png",

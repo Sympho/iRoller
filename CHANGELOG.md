@@ -2,6 +2,12 @@
 
 _Copyright (c) 2012 Daniele Veneroni. Released under MIT License._
 
+### Version 3.1.3
+
+* Firefox OS-ready
+* Fix all CSP Violation
+* Add webapp icon 256px
+
 ### Version 3.1.2
 
 * Update to PhoneGap 2.2.0
