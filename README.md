@@ -19,6 +19,7 @@ The application is formatted to be easly wrapped on a stand-alone application us
 ## Supported Platforms:
 
 * **Web App** - [iRoller](http://iroller.venerons.altervista.org)
+* **Firefox OS** - [Firefox Marketplace](https://marketplace.firefox.com/app/iroller/)
 * **iOS** - _not yet available_
 * **Android** - [Play Store](https://play.google.com/store/apps/details?id=org.veneronslabs.iroller), [apk](https://build.phonegap.com/apps/307339/download/android/)
 * **Windows Phone** - [xap](https://build.phonegap.com/apps/307339/download/winphone/)
