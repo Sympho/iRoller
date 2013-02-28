@@ -2,6 +2,12 @@
 
 _Copyright (c) 2012 Daniele Veneroni. Released under MIT License._
 
+### Version 3.1.4
+
+* Update jQuery 1.9.1
+* Update jQuery Mobile 1.3.0
+* Minor fixs
+
 ### Version 3.1.3
 
 * Firefox OS-ready
