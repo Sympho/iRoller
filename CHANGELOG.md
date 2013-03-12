@@ -2,6 +2,12 @@
 
 _Copyright (c) 2012 Daniele Veneroni. Released under MIT License._
 
+### Version 3.2.0
+
+* Add roll effect!
+* Major performance tweaks
+* directory reorder
+
 ### Version 3.1.4
 
 * Update jQuery 1.9.1

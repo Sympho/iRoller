@@ -103,7 +103,7 @@ function d(n) {
         localStorage.logger = log + "\n" + localStorage.logger;
     } catch(err) {}
     ris = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br /><b><h1>" + ris + "</h1></b>";
-    document.getElementById("risdiventi").innerHTML = ris;
+    $("#risdiventi").html(ris).effect("bounce", 500);
 }
 
 // FUNZIONE COIN (D20 SYSTEM)
@@ -119,7 +119,7 @@ function coin() {
         localStorage.logger = log + "\n" + localStorage.logger;
     } catch(err) {}
     ris = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br /><b><h1>" + ris + "</h1></b>";
-    document.getElementById("risdiventi").innerHTML = ris;
+    $("#risdiventi").html(ris).effect("bounce", 500);
 }
 
 // FUNZIONE CUSTOM (CUSTOM DICE)
@@ -150,7 +150,7 @@ function custom() {
         localStorage.logger = log + "\n" + localStorage.logger;
     } catch(err) {}
     ris += "=&nbsp;" + somma + "</h1></b>";
-    document.getElementById("risultatocustom").innerHTML = ris;
+    $("#risultatocustom").html(ris).effect("bounce", 500);
 }
 
 // FUNZIONE MARCIA (FORMULA DE')
@@ -187,7 +187,7 @@ function marcia(num) {
         default:
             alert("Errore nella determinazione della marcia");
     }
-    document.getElementById("risultatofd").innerHTML = ris;
+    $("#risultatofd").html(ris).effect("bounce", 500);
     try {
         localStorage.logger = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]     " + num + " Gear:     " + d + "\n" + localStorage.logger;
     } catch(err) {}
@@ -197,89 +197,96 @@ function marcia(num) {
 function catan(num) {
     var d = 0;
     var oggi = new Date();
-    document.getElementById("risultatocatan").innerHTML = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br /><br />"
+    var ris = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br /><br />"
     var i = 0;
     while (i < num) {
         d = (Math.floor(Math.random() * 6) + 1);
-        document.getElementById("risultatocatan").innerHTML = document.getElementById("risultatocatan").innerHTML + "<img src=\"lib/images/catan/" + d + ".png\">&nbsp;";
+        ris += "<img src=\"scripts/images/catan/" + d + ".png\">&nbsp;";
         i++;
     }
+    $("#risultatocatan").html(ris).effect("bounce", 500);
 }
 
 // FUNZIONE MEMOIR44 (MEMOIR '44)
 function memoir44(num) {
     var d = 0;
     var oggi = new Date();
-    document.getElementById("risultatomemoir44").innerHTML = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br /><br />"
+    var ris = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br /><br />"
     var i = 0;
     while (i < num) {
         d = (Math.floor(Math.random() * 6) + 1);
-        document.getElementById("risultatomemoir44").innerHTML = document.getElementById("risultatomemoir44").innerHTML + "<img src=\"lib/images/memoir44/" + d + ".png\">&nbsp;";
+        ris += "<img src=\"scripts/images/memoir44/" + d + ".png\">&nbsp;";
         i++;
     }
+    $("#risultatomemoir44").html(ris).effect("bounce", 500);
 }
 
 // FUNZIONE BATTLELORE (BATTLELORE)
 function battlelore(num) {
     var d = 0;
     var oggi = new Date();
-    document.getElementById("risultatobattlelore").innerHTML = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br /><br />"
+    var ris = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br /><br />"
     var i = 0;
     while (i < num) {
         d = (Math.floor(Math.random() * 6) + 1);
-        document.getElementById("risultatobattlelore").innerHTML = document.getElementById("risultatobattlelore").innerHTML + "<img src=\"lib/images/battlelore/" + d + ".png\">&nbsp;";
+        ris += "<img src=\"scripts/images/battlelore/" + d + ".png\">&nbsp;";
         i++;
     }
+    $("#risultatobattlelore").html(ris).effect("bounce", 500);
 }
 
 // FUNZIONE ANCIENTS (C&C: ANCIENTS)
 function ancients(num) {
     var d = 0;
     var oggi = new Date();
-    document.getElementById("risultatoancients").innerHTML = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br /><br />"
+    var ris = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br /><br />"
     var i = 0;
     while (i < num) {
         d = (Math.floor(Math.random() * 6) + 1);
-        document.getElementById("risultatoancients").innerHTML = document.getElementById("risultatoancients").innerHTML + "<img src=\"lib/images/ancients/" + d + ".png\">&nbsp;";
+        ris += "<img src=\"scripts/images/ancients/" + d + ".png\">&nbsp;";
         i++;
     }
+    $("#risultatoancients").html(ris).effect("bounce", 500);
 }
 
 // FUNZIONE WESTEROS (BATTLES FO WESTEROS)
 function westeros(num) {
     var d = 0;
     var oggi = new Date();
-    document.getElementById("risultatowesteros").innerHTML = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br /><br />"
+    var ris = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br /><br />"
     var i = 0;
     while (i < num) {
         d = (Math.floor(Math.random() * 8) + 1);
-        document.getElementById("risultatowesteros").innerHTML = document.getElementById("risultatowesteros").innerHTML + "<img src=\"lib/images/westeros/" + d + ".png\">&nbsp;";
+        ris += "<img src=\"scripts/images/westeros/" + d + ".png\">&nbsp;";
         i++;
     }
+    $("#risultatowesteros").html(ris).effect("bounce", 500);
 }
 
 // FUNZIONE TICKETTORIDETRAIN (TICKET TO RIDE DICE GAME)
 function tickettoridetrain(num) {
     var d = 0;
     var oggi = new Date();
-    document.getElementById("risultatotickettoridetrain").innerHTML = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br /><br />"
+    var ris = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br /><br />"
     var i = 0;
     while (i < num) {
         d = (Math.floor(Math.random() * 6) + 1);
-        document.getElementById("risultatotickettoridetrain").innerHTML = document.getElementById("risultatotickettoridetrain").innerHTML + "<img src=\"lib/images/tickettoride/train" + d + ".png\">&nbsp;";
+        ris += "<img src=\"scripts/images/tickettoride/train" + d + ".png\">&nbsp;";
         i++;
     }
+    $("#risultatotickettoridetrain").html(ris).effect("bounce", 500);
 }
 
 // FUNZIONE TICKETTORIDETUNNEL (TICKET TO RIDE DICE GAME)
 function tickettoridetunnel(num) {
     var d = 0;
     var oggi = new Date();
-    document.getElementById("risultatotickettoridetunnel").innerHTML = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br /><br />"
+    var ris = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br /><br />"
     var i = 0;
     while (i < num) {
         d = (Math.floor(Math.random() * 6) + 1);
-        document.getElementById("risultatotickettoridetunnel").innerHTML = document.getElementById("risultatotickettoridetunnel").innerHTML + "<img src=\"lib/images/tickettoride/tunnel" + d + ".png\">&nbsp;";
+        ris += "<img src=\"scripts/images/tickettoride/tunnel" + d + ".png\">&nbsp;";
         i++;
     }
+    $("#risultatotickettoridetunnel").html(ris).effect("bounce", 500);
 }
