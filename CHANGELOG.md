@@ -2,6 +2,14 @@
 
 _Copyright (c) 2012 Daniele Veneroni. Released under MIT License._
 
+### Update 12/05/2013
+
+* Update to jQuery 2.0.0
+* Update to jQuery Mobile 1.3.1
+* Update to jQuery UI 1.10.3
+* Update to Add2Home 2.0.7
+* Code optimization and bug fixs
+
 ### Version 3.2.0
 
 * Add roll effect!

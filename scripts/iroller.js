@@ -1,8 +1,6 @@
-/*!
- * iRoller functions
- * Copyright (c) 2012 Daniele Veneroni. Released under MIT License
- */
- 
+// Copyright (c) 2012 Daniele Veneroni. Released under MIT License
+"use strict";
+
 // ON LOAD
 window.addEventListener("load", function() {
      init();
@@ -10,12 +8,8 @@ window.addEventListener("load", function() {
 
 // FUNZIONE INIT
 function init() {
-    try {
-        localStorage.clear();
-        localStorage.logger = "";
-    } catch(err) {
-        alert("Web Storage is not supported by your browser, some functionality may not work!");
-    }
+    localStorage.clear();
+    localStorage.logger = "";
 
     var addToHomeConfig = {
         animationIn: 'drop',
@@ -95,13 +89,11 @@ function init() {
 // FUNZIONE D (D20 SYSTEM)
 function d(n) {
     var oggi = new Date();
-    var log = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "] ";
-    var ris = "1d" + n + ": ";
+    var log = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]   ";
+    var ris = "1d" + n + ":   ";
     ris += Math.floor(Math.random() * n) + 1;
     log += ris;
-    try {
-        localStorage.logger = log + "\n" + localStorage.logger;
-    } catch(err) {}
+    localStorage.logger = log + "\n" + localStorage.logger;
     ris = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br /><b><h1>" + ris + "</h1></b>";
     $("#risdiventi").html(ris).effect("bounce", 500);
 }
@@ -109,56 +101,49 @@ function d(n) {
 // FUNZIONE COIN (D20 SYSTEM)
 function coin() {
     var oggi = new Date();
-    var log = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "] ";
+    var log = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]   ";
     var ris = "Coin: ";
     var n = Math.floor(Math.random() * 2);
-    if (n == 0) ris += "Tail";
-    else ris += "Head";
+    if (n === 0) { ris += "Tail"; }
+    else { ris += "Head"; }
     log += ris;
-    try {
-        localStorage.logger = log + "\n" + localStorage.logger;
-    } catch(err) {}
+    localStorage.logger = log + "\n" + localStorage.logger;
     ris = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br /><b><h1>" + ris + "</h1></b>";
     $("#risdiventi").html(ris).effect("bounce", 500);
 }
 
 // FUNZIONE CUSTOM (CUSTOM DICE)
 function custom() {
-    num = document.getElementById("num");
-    facce = document.getElementById("facce");
-    if (num.value < 1 || num.value > 100) {
+    var num = document.getElementById("num").value;
+    var facce = document.getElementById("facce").value;
+    if (num < 1 || num > 100) {
         alert("Number of dice not valid. Min: 1, Max: 100");
         return;
     }
-    if (facce.value < 2 || facce.value > 100) {
+    if (facce < 2 || facce > 100) {
         alert("Number of faces not valid. Min: 2, Max: 100");
         return;
     }
     var oggi = new Date();
-    var log = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "] " + num.value + "d" + facce.value + ": ";
-    var ris = "[" + oggi.toLocaleDateString() + "&nbsp;" + oggi.toLocaleTimeString() + "]<br /><b><h1>" + num.value + "d" + facce.value + "<br /><br />";
-    var i;
+    var log = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]   " + num + "d" + facce + ":   ";
+    var ris = "[" + oggi.toLocaleDateString() + "&nbsp;" + oggi.toLocaleTimeString() + "]<br /><b><h1>" + num + "d" + facce + "<br /><br />";
     var somma = 0;
-    for (i = 0; i < num.value; i++) {
-        tiro = Math.floor(Math.random() * facce.value) + 1;
+    for (var i = 0; i < num; i++) {
+        var tiro = Math.floor(Math.random() * facce) + 1;
         somma += tiro;
         ris += "&nbsp;" + tiro + "&nbsp;";
         log += " " + tiro + " ";
     }
     log += "= " + somma;
-    try {
-        localStorage.logger = log + "\n" + localStorage.logger;
-    } catch(err) {}
+    localStorage.logger = log + "\n" + localStorage.logger;
     ris += "=&nbsp;" + somma + "</h1></b>";
     $("#risultatocustom").html(ris).effect("bounce", 500);
 }
 
 // FUNZIONE MARCIA (FORMULA DE')
 function marcia(num) {
-    var ris = "";
-    var d = 0;
-    var oggi = new Date();
-    var log = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br />"
+    var ris = "",  d, oggi = new Date();
+    var log = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br />";
     switch (num) {
         case 1:
             d = (Math.floor(Math.random() * 2) + 1);
@@ -188,16 +173,13 @@ function marcia(num) {
             alert("Errore nella determinazione della marcia");
     }
     $("#risultatofd").html(ris).effect("bounce", 500);
-    try {
-        localStorage.logger = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]     " + num + " Gear:     " + d + "\n" + localStorage.logger;
-    } catch(err) {}
+    localStorage.logger = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]     " + num + " Gear:     " + d + "\n" + localStorage.logger;
 }
 
 // FUNZIONE CATAN (CATAN DICE GAME)
 function catan(num) {
-    var d = 0;
-    var oggi = new Date();
-    var ris = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br /><br />"
+    var d, oggi = new Date();
+    var ris = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br /><br />";
     var i = 0;
     while (i < num) {
         d = (Math.floor(Math.random() * 6) + 1);
@@ -209,9 +191,8 @@ function catan(num) {
 
 // FUNZIONE MEMOIR44 (MEMOIR '44)
 function memoir44(num) {
-    var d = 0;
-    var oggi = new Date();
-    var ris = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br /><br />"
+    var d, oggi = new Date();
+    var ris = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br /><br />";
     var i = 0;
     while (i < num) {
         d = (Math.floor(Math.random() * 6) + 1);
@@ -223,9 +204,8 @@ function memoir44(num) {
 
 // FUNZIONE BATTLELORE (BATTLELORE)
 function battlelore(num) {
-    var d = 0;
-    var oggi = new Date();
-    var ris = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br /><br />"
+    var d, oggi = new Date();
+    var ris = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br /><br />";
     var i = 0;
     while (i < num) {
         d = (Math.floor(Math.random() * 6) + 1);
@@ -237,9 +217,8 @@ function battlelore(num) {
 
 // FUNZIONE ANCIENTS (C&C: ANCIENTS)
 function ancients(num) {
-    var d = 0;
-    var oggi = new Date();
-    var ris = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br /><br />"
+    var d, oggi = new Date();
+    var ris = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br /><br />";
     var i = 0;
     while (i < num) {
         d = (Math.floor(Math.random() * 6) + 1);
@@ -251,9 +230,8 @@ function ancients(num) {
 
 // FUNZIONE WESTEROS (BATTLES FO WESTEROS)
 function westeros(num) {
-    var d = 0;
-    var oggi = new Date();
-    var ris = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br /><br />"
+    var d, oggi = new Date();
+    var ris = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br /><br />";
     var i = 0;
     while (i < num) {
         d = (Math.floor(Math.random() * 8) + 1);
@@ -265,9 +243,8 @@ function westeros(num) {
 
 // FUNZIONE TICKETTORIDETRAIN (TICKET TO RIDE DICE GAME)
 function tickettoridetrain(num) {
-    var d = 0;
-    var oggi = new Date();
-    var ris = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br /><br />"
+    var d, oggi = new Date();
+    var ris = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br /><br />";
     var i = 0;
     while (i < num) {
         d = (Math.floor(Math.random() * 6) + 1);
@@ -279,9 +256,8 @@ function tickettoridetrain(num) {
 
 // FUNZIONE TICKETTORIDETUNNEL (TICKET TO RIDE DICE GAME)
 function tickettoridetunnel(num) {
-    var d = 0;
-    var oggi = new Date();
-    var ris = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br /><br />"
+    var d, oggi = new Date();
+    var ris = "[" + oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString() + "]<br /><br />";
     var i = 0;
     while (i < num) {
         d = (Math.floor(Math.random() * 6) + 1);
