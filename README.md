@@ -1,6 +1,6 @@
 # iRoller
 
-_Copyright (c) 2012 Daniele Veneroni. Released under MIT License._
+_Copyright (c) 2012-2013 Daniele Veneroni. Released under MIT License._
 
 iRoller it's an open source web application to roll dice for various game system like:
 

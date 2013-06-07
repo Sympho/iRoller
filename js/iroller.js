@@ -1,4 +1,4 @@
-// Copyright (c) 2012 Daniele Veneroni. Released under MIT License
+// Copyright (c) 2012-2013 Daniele Veneroni. Released under MIT License
 "use strict";
 
 // ON LOAD
@@ -183,7 +183,7 @@ function catan(num) {
     var i = 0;
     while (i < num) {
         d = (Math.floor(Math.random() * 6) + 1);
-        ris += "<img src=\"scripts/images/catan/" + d + ".png\">&nbsp;";
+        ris += "<img src=\"img/dice/catan/" + d + ".png\">&nbsp;";
         i++;
     }
     $("#risultatocatan").html(ris).effect("bounce", 500);
@@ -196,7 +196,7 @@ function memoir44(num) {
     var i = 0;
     while (i < num) {
         d = (Math.floor(Math.random() * 6) + 1);
-        ris += "<img src=\"scripts/images/memoir44/" + d + ".png\">&nbsp;";
+        ris += "<img src=\"img/dice/memoir44/" + d + ".png\">&nbsp;";
         i++;
     }
     $("#risultatomemoir44").html(ris).effect("bounce", 500);
@@ -209,7 +209,7 @@ function battlelore(num) {
     var i = 0;
     while (i < num) {
         d = (Math.floor(Math.random() * 6) + 1);
-        ris += "<img src=\"scripts/images/battlelore/" + d + ".png\">&nbsp;";
+        ris += "<img src=\"img/dice/battlelore/" + d + ".png\">&nbsp;";
         i++;
     }
     $("#risultatobattlelore").html(ris).effect("bounce", 500);
@@ -222,7 +222,7 @@ function ancients(num) {
     var i = 0;
     while (i < num) {
         d = (Math.floor(Math.random() * 6) + 1);
-        ris += "<img src=\"scripts/images/ancients/" + d + ".png\">&nbsp;";
+        ris += "<img src=\"img/dice/ancients/" + d + ".png\">&nbsp;";
         i++;
     }
     $("#risultatoancients").html(ris).effect("bounce", 500);
@@ -235,7 +235,7 @@ function westeros(num) {
     var i = 0;
     while (i < num) {
         d = (Math.floor(Math.random() * 8) + 1);
-        ris += "<img src=\"scripts/images/westeros/" + d + ".png\">&nbsp;";
+        ris += "<img src=\"img/dice/westeros/" + d + ".png\">&nbsp;";
         i++;
     }
     $("#risultatowesteros").html(ris).effect("bounce", 500);
@@ -248,7 +248,7 @@ function tickettoridetrain(num) {
     var i = 0;
     while (i < num) {
         d = (Math.floor(Math.random() * 6) + 1);
-        ris += "<img src=\"scripts/images/tickettoride/train" + d + ".png\">&nbsp;";
+        ris += "<img src=\"img/dice/tickettoride/train" + d + ".png\">&nbsp;";
         i++;
     }
     $("#risultatotickettoridetrain").html(ris).effect("bounce", 500);
@@ -261,7 +261,7 @@ function tickettoridetunnel(num) {
     var i = 0;
     while (i < num) {
         d = (Math.floor(Math.random() * 6) + 1);
-        ris += "<img src=\"scripts/images/tickettoride/tunnel" + d + ".png\">&nbsp;";
+        ris += "<img src=\"img/dice/tickettoride/tunnel" + d + ".png\">&nbsp;";
         i++;
     }
     $("#risultatotickettoridetunnel").html(ris).effect("bounce", 500);

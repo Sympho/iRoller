@@ -1,6 +1,13 @@
 # iRoller Changelog
 
-_Copyright (c) 2012 Daniele Veneroni. Released under MIT License._
+_Copyright (c) 2012-2013 Daniele Veneroni. Released under MIT License._
+
+### Update 07/06/2013
+
+* Updated config.xml
+* Updated splash screens
+* Reordered directories
+* Updated copyright
 
 ### Update 12/05/2013
 

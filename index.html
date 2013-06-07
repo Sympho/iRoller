@@ -1,4 +1,4 @@
-<!-- Copyright (c) 2012 Daniele Veneroni. Released under MIT License -->
+<!-- Copyright (c) 2012-2013 Daniele Veneroni. Released under MIT License -->
 <!DOCTYPE html> 
 <html> 
 	<head> 
@@ -14,33 +14,53 @@
         <meta content="yes" name="apple-mobile-web-app-capable" />
         <meta content="black" name="apple-mobile-web-app-status-bar-style" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-        <!-- iOS web app icons -->
-        <link href="icons/ios/icon57.png" sizes="57x57" rel="apple-touch-icon" /> <!-- iPhone non-retina 57x57 -->
-        <link href="icons/ios/icon72.png" sizes="72x72" rel="apple-touch-icon" /> <!-- iPad non-retina 72x72 -->
-        <link href="icons/ios/icon114.png" sizes="114x114" rel="apple-touch-icon" /> <!-- iPhone retina 114x114 -->
-        <link href="icons/ios/icon144.png" sizes="144x144" rel="apple-touch-icon"/> <!-- iPad retina 144x144 -->
-        <!-- iOS web app spash screens -->
-        <link rel="apple-touch-startup-image" href="splash/ios/splash-320x460.jpg" media="(device-width: 320px)" /> <!-- iPhone standard resolution 320x460 (landscape not needed because all web apps start portrait on iPhone) -->
-        <link rel="apple-touch-startup-image" href="splash/ios/splash-640x920.jpg" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)" /> <!-- iPhone high resolution (retina) 640x920 pixels (landscape not needed because all web apps start portrait on iPhone) -->
-        <link rel="apple-touch-startup-image" href="splash/ios/splash-768x1004.jpg" media="(device-width: 768px) and (orientation: portrait)" /> <!-- iPad Portrait 768x1004 -->
-        <link rel="apple-touch-startup-image" href="splash/ios/splash-748x1024.jpg" media="(device-width: 768px) and (orientation: landscape)" /> <!-- iPad Landscape 748x1024 (yes, a portrait image but with content rotated 90 degrees - allows 20px for status bar) -->
-        <link rel="apple-touch-startup-image" href="splash/ios/splash-1536x2008.jpg" media="(device-width: 768px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" /> <!-- iPad retina Portrait 1536x2008 -->
-        <link rel="apple-touch-startup-image" href="splash/ios/splash-1496x2048.jpg" media="(device-width: 768px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" /> <!-- iPad retina Landscape 1496x2048 (yes, a portrait image but with content rotated 90 degrees - allows 40px for status bar) -->
+        
+        <!-- iPhone -->
+        <link href="img/icons/ios/icon57.png" sizes="57x57" rel="apple-touch-icon">
+        <link href="img/splash/ios/splash320x460.png" media="(device-width: 320px) and (device-height: 480px)
+                 and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+
+        <!-- iPhone (Retina) -->
+        <link href="img/icons/ios/icon114.png" sizes="114x114" rel="apple-touch-icon">
+        <link href="img/splash/ios/splash640x920.png" media="(device-width: 320px) and (device-height: 480px)
+                 and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+        <!-- iPhone 5 -->
+        <link href="img/splash/ios/splash640x1096.png" media="(device-width: 320px) and (device-height: 568px)
+                 and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+        <!-- iPad -->
+        <link href="img/icons/ios/icon72.png" sizes="72x72" rel="apple-touch-icon">
+        <link href="img/splash/ios/splash768x1004.png" media="(device-width: 768px) and (device-height: 1024px)
+                 and (orientation: portrait)
+                 and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+        <link href="img/splash/ios/splash748x1024.png" media="(device-width: 768px) and (device-height: 1024px)
+                 and (orientation: landscape)
+                 and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+
+        <!-- iPad (Retina) -->
+        <link href="img/icons/ios/icon144.png" sizes="144x144" rel="apple-touch-icon">
+        <link href="img/splash/ios/splash1536x2008.png" media="(device-width: 768px) and (device-height: 1024px)
+                 and (orientation: portrait)
+                 and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+        <link href="img/splash/ios/splash1496x2048.png" media="(device-width: 768px) and (device-height: 1024px)
+                 and (orientation: landscape)
+                 and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
             
         <!-- JQUERY MOBILE FRAMEWORK META TAGS -->
-        <link rel="stylesheet" href="scripts/lib/formulade.css" />
-        <link rel="stylesheet" href="scripts/lib/jquery.mobile-1.3.1.css" />
-        <script src="scripts/lib/jquery-2.0.0.js"></script>
-        <script src="scripts/lib/jqueryui-1.10.3.js"></script>
-        <script src="scripts/lib/jquery.mobile-1.3.1.js"></script>
+        <link rel="stylesheet" href="js/lib/formulade.css" />
+        <link rel="stylesheet" href="js/lib/jquery.mobile-1.3.1.css" />
+        <script src="js/lib/jquery-2.0.0.js"></script>
+        <script src="js/lib/jqueryui-1.10.3.js"></script>
+        <script src="js/lib/jquery.mobile-1.3.1.js"></script>
 
             
         <!-- ADD2HOME META TAGS -->
-        <script type="application/javascript" src="scripts/lib/add2home.js"></script>
-        <link rel="stylesheet" href="scripts/lib/add2home.css">
+        <script type="application/javascript" src="js/lib/add2home.js"></script>
+        <link rel="stylesheet" href="js/lib/add2home.css">
             
         <!-- APPLICATION SCRIPT -->
-        <script src="scripts/iroller.js"></script>
+        <script src="js/iroller.js"></script>
             
     </head> 
     <body> 
