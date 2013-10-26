@@ -14,7 +14,7 @@ iRoller it's an open source web application to roll dice for various game system
 * C&C: Ancients
 * Battles of Westeros
 
-The application is formatted to be easly wrapped on a stand-alone application using PhoneGap Build, so it's available for iOS, Android, Windows Phone 7, BlackBerry, WebOS and Symbian.
+The application is formatted to be easly wrapped on a stand-alone application using PhoneGap Build, so it's available for iOS, Android and Windows Phone 7.
 
 ## Supported Platforms:
 
@@ -23,6 +23,3 @@ The application is formatted to be easly wrapped on a stand-alone application us
 * **iOS** - _not yet available_
 * **Android** - [Play Store](https://play.google.com/store/apps/details?id=org.veneronslabs.iroller), [apk](https://build.phonegap.com/apps/307339/download/android/)
 * **Windows Phone** - [xap](https://build.phonegap.com/apps/307339/download/winphone/)
-* **BlackBerry** - [OTA Install](https://build.phonegap.com/apps/307339/download/blackberry/)
-* **WebOS** - [ipk](https://build.phonegap.com/apps/307339/download/webos/)
-* **Symbian** - [wgz](https://build.phonegap.com/apps/307339/download/symbian/)

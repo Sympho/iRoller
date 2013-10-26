@@ -2,6 +2,15 @@
 
 _Copyright (c) 2012-2013 Daniele Veneroni. Released under MIT License._
 
+### Update 26/10/2013
+
+* Update to PhoneGap 3.1.0
+* Updated android icons
+* Updated webapp icons
+* Removed WebOS
+* Removed BlackBerry
+* Removed Symbian
+
 ### Update 07/06/2013
 
 * Updated config.xml
